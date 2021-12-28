@@ -21,15 +21,35 @@ export function Luck() {
     const [img3, setImg3] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [img4, setImg4] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [bowl, setBowl] = useState('');
+    const [cont, setCont] = useState(0);
+
+
+    async function handleCont(currentStep: number) {
+        setCont(currentStep + 1)
+    }
 
     async function handleListPlays() {
-        console.log('passei awui')
-        axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-        const {data} = await api.get('/bowl?bowl=4')
+        const { data } = await api.get<IReponse[]>(`/bowl?bowl=${bowl}`)
 
-        console.log(data)
+        data.map(async play => {
+            switch (play.id) {
+                case 6:
+                    setImg1(play.img)
+                    break;
+                case 7:
+                    setImg2(play.img)
+                    break;
+                case 8:
+                    setImg3(play.img)
+                    break;
+                case 9:
+                    setImg4(play.img)
+                    break;
+            }
+            handleCont(cont)
+        })
     }
-    
+
 
     return (
         <div className="container-luck">
