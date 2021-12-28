@@ -62,8 +62,7 @@ export function Luck() {
                     <img src={img3} />
                     <img src={img4} />
                 </div>
-                <button onClick={()=> luckPlay()}>SORTEAR</button>
-                <input type="text" onChange={(e) => setBowl(e.target.value)} placeholder="Pote" />
+                <input type="text" onChange={(e) => setBowl(e.target.value)} placeholder="Número do pote" />
                 <button className="button" onClick={() => handleListPlays()}><BiSearchAlt /></button>
             </div>
             <img src="https://uploadnodejs.s3.amazonaws.com/d4d542df290b9cfd6173708e6d7b80d8-messi_graphic.jpg" />

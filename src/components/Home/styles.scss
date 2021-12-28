@@ -1,6 +1,23 @@
-.contanier-home{
-    display: flex;
-    width: 1450px;
-    flex-direction: row;
+div {
+    .button-luck {
+        position       : absolute;
+        margin-left    : 845px;
+        margin-top     : -160px;
+        background     : #ffcd1e;
+        height         : 56px;
+        width          : 156px;
+        border-radius  : 8px;
+        color          : #09090a;
+        font-size      : 16px;
+        font-weight    : bold;
+        text-transform : uppercase;
+        text-decoration: none;
+    }
+}
+
+.contanier-home {
+    display        : flex;
+    width          : 1450px;
+    flex-direction : row;
     justify-content: space-between;
 }

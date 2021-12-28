@@ -6,14 +6,16 @@ import './styles.scss'
 export function Home() {
     return (
         <>
-        <div>
-            <Luck />
-        </div>
+            <div>
+                <Luck />
+                <button className="button-luck" >SORTEAR</button>
+
+            </div>
             <div className="contanier-home">
-                <Team team="Tolima"/>
-                <Team team="Paysandu"/>
-                <Team team="Bragantino"/>
-                <Team team="Andarilhos_do_Sertão"/>
+                <Team team="Tolima" />
+                <Team team="Paysandu" />
+                <Team team="Bragantino" />
+                <Team team="Andarilhos_do_Sertão" />
             </div>
         </>
     )
