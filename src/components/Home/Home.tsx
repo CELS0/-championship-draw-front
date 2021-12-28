@@ -7,15 +7,9 @@ import './styles.scss'
 
 
 export function Home() {
-    const { bowl } = useContext(AuthContext)
+    const { luckPlay } = useContext(AuthContext)
     const [img, setImg] = useState('')
 
-    async function luckPlay() {
-        const { data } = await api.get(`/luck?bowl=${bowl}`)
-        const { img } = data;
-
-        setImg(img)
-    }
 
     return (
         <>

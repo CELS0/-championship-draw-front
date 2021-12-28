@@ -48,6 +48,7 @@ export function Luck() {
     }
 
 
+
     return (
         <div className="container-luck">
             <img src="https://uploadnodejs.s3.amazonaws.com/a7ac5fcf44c1a2f79eba08652301fcdc-maxresdefault.jpg" />

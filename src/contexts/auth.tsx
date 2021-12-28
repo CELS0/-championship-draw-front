@@ -23,6 +23,7 @@ type AuthContextData = {
     signInUrl: string;
     bowl: string;
     handleBowl: (newBowl: string) => void;
+    luckPlay: () => void;
 }
 
 export const AuthContext = createContext({} as AuthContextData);
@@ -54,6 +55,16 @@ export function AuthProvider(props: AuthProvider) {
         setBowl(newBowl)
     }
 
+
+    async function luckPlay() {
+        const { data } = await api.get(`/luck?bowl=${bowl}`)
+        const { img } = data;
+
+ console.log('PPPPPPPPP', img)
+    }
+
+
+
     useEffect(() => {
         const url = window.location.href;
         const hasGithubCode = url.includes('?code=');
@@ -81,7 +92,7 @@ export function AuthProvider(props: AuthProvider) {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ signInUrl, user,handleBowl,bowl }}>
+        <AuthContext.Provider value={{ signInUrl, user,handleBowl,bowl,luckPlay }}>
             {props.children}
         </AuthContext.Provider>
     )
