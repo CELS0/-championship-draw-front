@@ -4,6 +4,16 @@ import './styles.scss'
 import { api } from "../../services/api";
 import axios from 'axios';
 
+type IReponse = {
+    id: number,
+    name: string,
+    img: string,
+    bowl: number,
+    isActive: boolean,
+    created_at: Date,
+    updated_at: Date
+}
+
 
 export function Luck() {
     const [img1, setImg1] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
@@ -14,9 +24,12 @@ export function Luck() {
 
     async function handleListPlays() {
         console.log('passei awui')
-        const { data } = await axios.get('Access-Control-Allow-Origin: http://localhost:3030/bowl?bowl=4')
+        axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+        const {data} = await api.get('/bowl?bowl=4')
+
         console.log(data)
     }
+    
 
     return (
         <div className="container-luck">
