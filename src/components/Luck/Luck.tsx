@@ -46,6 +46,7 @@ export function Luck() {
 
     async function luckPlay() {
         const { data } = await api.get<IReponse[]>(`/luck?bowl=${bowl}`)
+        console.log(data)
     }
 
 
@@ -61,7 +62,7 @@ export function Luck() {
                     <img src={img3} />
                     <img src={img4} />
                 </div>
-                <button>SORTEAR</button>
+                <button onClick={()=> luckPlay()}>SORTEAR</button>
                 <input type="text" onChange={(e) => setBowl(e.target.value)} placeholder="Pote" />
                 <button className="button" onClick={() => handleListPlays()}><BiSearchAlt /></button>
             </div>
