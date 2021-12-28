@@ -3,10 +3,11 @@ import './styles.scss'
 
 type Props = {
     team: string;
+    img?: string;
 }
 
 
-export function Team({ team}: Props) {
+export function Team({ team, img}: Props) {
     const [img1, setImg1] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [img2, setImg2] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [img3, setImg3] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
@@ -25,7 +26,7 @@ export function Team({ team}: Props) {
             <div>
                 <h2>{team}</h2>
                 <div>
-                    <img src={img1} />
+                    <img src={img} />
                     <img src={img2} />
                     <img src={img3} />
                     <img src={img4} />
