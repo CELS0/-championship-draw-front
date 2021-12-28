@@ -1,8 +1,12 @@
 import { useState } from "react"
 import './styles.scss'
 
+type Props = {
+    team: string;
+}
 
-export function Team() {
+
+export function Team({ team}: Props) {
     const [img1, setImg1] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [img2, setImg2] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [img3, setImg3] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
@@ -19,7 +23,7 @@ export function Team() {
     return (
         <div className="container-team">
             <div>
-                <h2>Tolima</h2>
+                <h2>{team}</h2>
                 <div>
                     <img src={img1} />
                     <img src={img2} />

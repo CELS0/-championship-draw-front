@@ -8,10 +8,10 @@ export function Home() {
         <>
             <Luck />
             <div className="contanier-home">
-                <Team />
-                <Team />
-                <Team />
-                <Team />
+                <Team team="Tolima"/>
+                <Team team="Paysandu"/>
+                <Team team="Bragantino"/>
+                <Team team="Andarilhos_do_Sertão"/>
             </div>
         </>
     )
