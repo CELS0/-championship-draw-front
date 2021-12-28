@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Team } from "../Team/Teams";
+import { BiSearchAlt } from "react-icons/bi";
 import './styles.scss'
 
 export function Luck() {
@@ -20,6 +21,8 @@ export function Luck() {
                     <img src={img4} />
                 </div>
                 <button>SORTEAR</button>
+                <input type="text"  placeholder="Pote"/>
+                <button className="button"><BiSearchAlt/></button>
             </div>
             <img src="https://uploadnodejs.s3.amazonaws.com/d4d542df290b9cfd6173708e6d7b80d8-messi_graphic.jpg" />
         </div>

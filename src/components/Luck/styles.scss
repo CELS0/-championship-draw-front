@@ -1,16 +1,17 @@
 .container-luck {
-    display: flex;
+    display        : flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction : row;
 
-     img {
-         height: 100%;
-         width: 480px;
-         margin-top: 180px;
-         margin: 50px;
-         border-radius: 16px;
-     }
-    .content-luck{
+    img {
+        height       : 100%;
+        width        : 480px;
+        margin-top   : 180px;
+        margin       : 50px;
+        border-radius: 16px;
+    }
+
+    .content-luck {
         margin-bottom  : 200px;
         margin-top     : 40px;
         display        : flex;
@@ -33,11 +34,33 @@
             }
         }
 
+        input {
+            height         : 36px;
+            width        : 156px;
+            border-radius: 8px;
+            margin-top   : 30px;
+            margin-bottom: 2px;
+        }
+
         button {
             margin-top     : 80px;
             background     : #ffcd1e;
             height         : 56px;
             width          : 156px;
+            border-radius  : 8px;
+            color          : #09090a;
+            font-size      : 16px;
+            font-weight    : bold;
+            text-transform : uppercase;
+            text-decoration: none;
+        }
+
+        .button {
+            margin-top     : 80px;
+            background     : #ffcd1e;
+            height         : 36px;
+            width          : 156px;
+            margin-top     : 0px;
             border-radius  : 8px;
             color          : #09090a;
             font-size      : 16px;
