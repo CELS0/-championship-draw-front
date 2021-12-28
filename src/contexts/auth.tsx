@@ -179,6 +179,7 @@ export function AuthProvider(props: AuthProvider) {
         const { img } = data;
 
         switch (numberBowl) {
+            // LOTE 01:
             case 0:
                 setImg1(img)
                 break;
@@ -215,8 +216,6 @@ export function AuthProvider(props: AuthProvider) {
             case 11:
                 setImg63(img)
                 break;
-
-            // TEAM 2
             case 12:
                 setImg4(img)
                 break;
@@ -229,30 +228,105 @@ export function AuthProvider(props: AuthProvider) {
             case 15:
                 setImg64(img)
                 break;
-            // case 16:
-            //     setImg25(img)
-            //     break;
-            // case 17:
-            //     setImg26(img)
-            //     break;
-            // case 18:
-            //     setImg27(img)
-            //     break;
-            // case 19:
-            //     setImg28(img)
-            //     break;
-            // case 20:
-            //     setImg29(img)
-            //     break;
-            // case 21:
-            //     setImg30(img)
-            //     break;
-            // case 22:
-            //     setImg31(img)
-            //     break;
-            // case 23:
-            //     setImg32(img)
-            //     break;
+            // LOTE 02:
+            case 16:
+                setImg5(img)
+                break;
+            case 17:
+                setImg25(img)
+                break;
+            case 18:
+                setImg45(img)
+                break;
+            case 19:
+                setImg65(img)
+                break;
+            case 20:
+                setImg6(img)
+                break;
+            case 21:
+                setImg26(img)
+                break;
+            case 22:
+                setImg46(img)
+                break;
+            case 23:
+                setImg66(img)
+                break;
+            case 24:
+                setImg7(img)
+                break;
+            case 25:
+                setImg27(img)
+                break;
+            case 26:
+                setImg47(img)
+                break;
+            case 27:
+                setImg67(img)
+                break;
+            case 28:
+                setImg8(img)
+                break;
+            case 29:
+                setImg28(img)
+                break;
+            case 30:
+                setImg48(img)
+                break;
+            case 31:
+                setImg68(img)
+                break;
+            // LOTE 03:
+            case 32:
+                setImg9(img)
+                break;
+            case 33:
+                setImg29(img)
+                break;
+            case 34:
+                setImg49(img)
+                break;
+            case 35:
+                setImg69(img)
+                break;
+            case 36:
+                setImg10(img)
+                break;
+            case 37:
+                setImg30(img)
+                break;
+            case 38:
+                setImg50(img)
+                break;
+            case 39:
+                setImg70(img)
+                break;
+            case 40:
+                setImg11(img)
+                break;
+            case 41:
+                setImg31(img)
+                break;
+            case 42:
+                setImg51(img)
+                break;
+            case 43:
+                setImg71(img)
+                break;
+            case 44:
+                setImg12(img)
+                break;
+            case 45:
+                setImg32(img)
+                break;
+            case 46:
+                setImg52(img)
+                break;
+            case 47:
+                setImg72(img)
+                break;
+
         }
 
     }

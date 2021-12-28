@@ -9,20 +9,7 @@ type Props = {
 
 
 export function Team4({ team, img }: Props) {
-    // const [img1, setImg1] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
-    // const [img2, setImg2] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
-    // const [img3, setImg3] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
-    // const [img4, setImg4] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
-    const [img5, setImg5] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
-    const [img6, setImg6] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
-    const [img7, setImg7] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
-    const [img8, setImg8] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
-    const [img9, setImg9] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
-    const [img10, setImg10] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
-    const [img11, setImg11] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
-    const [img12, setImg12] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
-
-    const { img61, img62, img63, img64 } = useContext(AuthContext)
+    const { img61, img62, img63, img64, img65, img66, img67, img68, img69, img70, img71, img72} = useContext(AuthContext)
 
 
     return (
@@ -38,18 +25,18 @@ export function Team4({ team, img }: Props) {
             </div>
             <div>
                 <div>
-                    <img src={img5} />
-                    <img src={img6} />
-                    <img src={img7} />
-                    <img src={img8} />
+                    <img src={img65} />
+                    <img src={img66} />
+                    <img src={img67} />
+                    <img src={img68} />
                 </div>
             </div>
             <div>
                 <div>
-                    <img src={img9} />
-                    <img src={img10} />
-                    <img src={img11} />
-                    <img src={img12} />
+                    <img src={img69} />
+                    <img src={img70} />
+                    <img src={img71} />
+                    <img src={img72} />
                 </div>
             </div>
         </div>
