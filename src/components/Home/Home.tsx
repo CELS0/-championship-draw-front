@@ -6,7 +6,9 @@ import './styles.scss'
 export function Home() {
     return (
         <>
+        <div>
             <Luck />
+        </div>
             <div className="contanier-home">
                 <Team team="Tolima"/>
                 <Team team="Paysandu"/>
