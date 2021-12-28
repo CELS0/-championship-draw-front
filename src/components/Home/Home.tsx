@@ -1,8 +1,10 @@
 import { useContext, useState } from 'react'
 import { AuthContext } from '../../contexts/auth'
-import { api } from '../../services/api'
 import { Luck } from '../Luck/Luck'
-import { Team } from '../Team/Teams'
+import { Team1 } from '../Team1/Teams'
+import { Team2 } from '../Team2/Teams'
+import { Team3 } from '../Team3/Teams'
+import { Team4 } from '../Team4/Teams'
 import './styles.scss'
 
 
@@ -24,10 +26,10 @@ export function Home() {
                 <button className="button-luck" onClick={() => handleStep(cont)}>SORTEAR</button>
             </div>
             <div className="contanier-home">
-                <Team team="Tolima"/>
-                <Team team="Paysandu"/>
-                <Team team="Bragantino"/>
-                <Team team="Andarilhos_do_Sertão"/>
+                <Team1 team="Tolima" />
+                <Team2 team="Paysandu" />
+                <Team3 team="Bragantino" />
+                <Team4 team="Andarilhos_do_Sertão" />
             </div>
         </>
     )
