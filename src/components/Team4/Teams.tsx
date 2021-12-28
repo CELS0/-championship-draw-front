@@ -22,7 +22,7 @@ export function Team4({ team, img }: Props) {
     const [img11, setImg11] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [img12, setImg12] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
 
-    const { img1, img2, img3, img4 } = useContext(AuthContext)
+    const { img61, img62, img63, img64 } = useContext(AuthContext)
 
 
     return (
@@ -30,10 +30,10 @@ export function Team4({ team, img }: Props) {
             <div>
                 <h2>{team}</h2>
                 <div>
-                    <img src={img1} />
-                    <img src={img2} />
-                    <img src={img3} />
-                    <img src={img4} />
+                    <img src={img61} />
+                    <img src={img62} />
+                    <img src={img63} />
+                    <img src={img64} />
                 </div>
             </div>
             <div>
