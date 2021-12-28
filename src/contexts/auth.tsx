@@ -21,7 +21,8 @@ type User = {
 type AuthContextData = {
     user: User | null;
     signInUrl: string;
-    signOut: () => void;
+    bowl: string;
+    handleBowl: (newBowl: string) => void;
 }
 
 export const AuthContext = createContext({} as AuthContextData);
@@ -33,6 +34,7 @@ type AuthProvider = {
 export function AuthProvider(props: AuthProvider) {
     const signInUrl = 'https://github.com/login/oauth/authorize?scope=user&client_id=473ca6385c1f1ae4800b';
     const [user, setUser] = useState<User | null>(null)
+    const [bowl, setBowl]= useState('')
 
    
     async function signIn(githubCode: string) {
@@ -48,9 +50,8 @@ export function AuthProvider(props: AuthProvider) {
         setUser(user)
     }
 
-    function signOut(){
-        setUser(null)
-        localStorage.removeItem('@dowhile:token')
+    function handleBowl(newBowl: string){
+        setBowl(newBowl)
     }
 
     useEffect(() => {
@@ -80,7 +81,7 @@ export function AuthProvider(props: AuthProvider) {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ signInUrl, user,signOut }}>
+        <AuthContext.Provider value={{ signInUrl, user,handleBowl,bowl }}>
             {props.children}
         </AuthContext.Provider>
     )
