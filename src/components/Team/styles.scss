@@ -1,25 +1,28 @@
 .container-team {
     display        : flex;
-    height         : 180px;
+    height         : 100px;
+    margin-top     : -80px;
     width          : 10px;
     flex-direction : column;
     justify-content: space-between;
 
     div {
-        display : flex;
+        display        : flex;
         flex-direction : column;
         justify-content: space-between;
-        h2{
-            margin-left: 100px;
+
+        h2 {
+            margin-left  : 100px;
             margin-bottom: 20px;
         }
+
         div {
             display        : flex;
             flex-direction : row;
             justify-content: space-between;
             height         : 10px;
             width          : 10px;
-            margin-bottom: 80px;
+            margin-bottom  : 80px;
 
             img {
                 height       : 80px;

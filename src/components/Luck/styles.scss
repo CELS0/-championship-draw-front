@@ -1,35 +1,49 @@
 .container-luck {
-    margin-bottom  : 200px;
-    margin-top     : 40px;
-    display        : flex;
-    align-items    : center;
-    flex-direction : column;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 
-    h1{
-        color: #ffcd1e;
-    }
+     img {
+         height: 100%;
+         width: 480px;
+         margin-top: 180px;
+         margin: 50px;
+         border-radius: 16px;
+     }
+    .content-luck{
+        margin-bottom  : 200px;
+        margin-top     : 40px;
+        display        : flex;
+        align-items    : center;
+        flex-direction : column;
+        justify-content: center;
 
-    div {
-        margin-top: 40px;
-        img { 
-            height       : 120px;
-            width        : 120px;
-            border-radius: 512px;
-            margin       : 10px;
+        h1 {
+            color: #ffcd1e;
         }
-    }
 
-    button{
-        margin-top: 80px;
-        background: #ffcd1e;
-        height    : 56px;
-        width : 156px;
-        border-radius: 8px;
-        color     : #09090a;
-        font-size : 16px;
-        font-weight: bold;
-        text-transform : uppercase;
-        text-decoration: none;
+        div {
+            margin-top: 40px;
+
+            img {
+                height       : 120px;
+                width        : 120px;
+                border-radius: 512px;
+                margin       : 10px;
+            }
+        }
+
+        button {
+            margin-top     : 80px;
+            background     : #ffcd1e;
+            height         : 56px;
+            width          : 156px;
+            border-radius  : 8px;
+            color          : #09090a;
+            font-size      : 16px;
+            font-weight    : bold;
+            text-transform : uppercase;
+            text-decoration: none;
+        }
     }
 }
