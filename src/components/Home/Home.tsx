@@ -8,20 +8,26 @@ import './styles.scss'
 
 export function Home() {
     const { luckPlay } = useContext(AuthContext)
-    const [img, setImg] = useState('')
+    const [cont, setCont] = useState(0)
+
+    function handleStep(newCont: number) {
+        setCont(newCont + 1)
+
+        luckPlay(cont)
+    }
 
 
     return (
         <>
             <div>
                 <Luck />
-                <button className="button-luck" onClick={() => luckPlay()}>SORTEAR</button>
+                <button className="button-luck" onClick={() => handleStep(cont)}>SORTEAR</button>
             </div>
             <div className="contanier-home">
-                <Team team="Tolima" img={img}/>
-                <Team team="Paysandu" img={img}/>
-                <Team team="Bragantino" img={img}/>
-                <Team team="Andarilhos_do_Sertão" img={img} />
+                <Team team="Tolima"/>
+                <Team team="Paysandu"/>
+                <Team team="Bragantino"/>
+                <Team team="Andarilhos_do_Sertão"/>
             </div>
         </>
     )
