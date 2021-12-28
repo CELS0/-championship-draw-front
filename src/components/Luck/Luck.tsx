@@ -2,7 +2,6 @@ import { useState } from "react";
 import { BiSearchAlt } from "react-icons/bi";
 import './styles.scss'
 import { api } from "../../services/api";
-import axios from 'axios';
 
 type IReponse = {
     id: number,
@@ -21,12 +20,7 @@ export function Luck() {
     const [img3, setImg3] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [img4, setImg4] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [bowl, setBowl] = useState('');
-    const [cont, setCont] = useState(0);
 
-
-    async function handleCont(currentStep: number) {
-        setCont(currentStep + 1)
-    }
 
     async function handleListPlays() {
         const { data } = await api.get<IReponse[]>(`/bowl?bowl=${bowl}`)
@@ -46,8 +40,12 @@ export function Luck() {
                     setImg4(play.img)
                     break;
             }
-            handleCont(cont)
         })
+    }
+
+
+    async function luckPlay() {
+        const { data } = await api.get<IReponse[]>(`/luck?bowl=${bowl}`)
     }
 
 
