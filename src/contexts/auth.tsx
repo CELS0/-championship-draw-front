@@ -68,11 +68,6 @@ export function AuthProvider(props: AuthProvider) {
         const { data } = await api.get(`/luck?bowl=${bowl}`)
         const { img } = data;
 
-        console.log('AAAAAAA',img)
-        console.log('OOOOOOO',numberBowl)
-        console.log('UUUUUUUU',img1)
-
-
         switch (numberBowl) {
             case 0:
                 setImg1(img)
