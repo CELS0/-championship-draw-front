@@ -195,7 +195,7 @@ export function AuthProvider(props: AuthProvider) {
 
     async function luckPlay(numberBowl: number) {
         const { data } = await api.get(`/luck?bowl=${bowl}`)
-        const { message, img } = data;
+        const { Message, img } = data;
 
         setImg(img)
         console.log(img)
@@ -353,7 +353,8 @@ export function AuthProvider(props: AuthProvider) {
 
             }
         } else {
-            setMessage(message);
+            setMessage(Message);
+            console.log(message);
         }
 
     }
