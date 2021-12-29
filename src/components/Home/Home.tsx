@@ -23,9 +23,11 @@ export function Home() {
         if (count<=3) {
             setCont(newCont + 1)
         } 
-        if (count==5) {
+        if (count==4) {
             handleIsactive(false);
-            count =0;
+            toast.success('Todos jogadores nesse pote já foram sorteados')
+            setCont(newCont + 1)
+            count=0
         }
 
         luckPlay(cont)

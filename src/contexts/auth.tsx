@@ -198,10 +198,9 @@ export function AuthProvider(props: AuthProvider) {
         const { Message, img } = data;
 
         setImg(img)
-        console.log(img)
-
         if (img) {
             const { img } = data;
+            console.log(numberBowl)
             switch (numberBowl) {
                 // LOTE 01:
                 case 0:
