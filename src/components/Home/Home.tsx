@@ -13,8 +13,7 @@ import './styles.scss'
 
 var count = 0
 export function Home() {
-        toast.success("Reset success!")
-    
+
     const { luckPlay, message, handleIsactive, isActive, img } = useContext(AuthContext)
     const [cont, setCont] = useState(0)
 
@@ -38,7 +37,10 @@ export function Home() {
     async function handleReset() {
         await api.post('/reset')
 
-        window.location.reload();
+        toast.success("Reset success!")
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000);
     }
 
 
