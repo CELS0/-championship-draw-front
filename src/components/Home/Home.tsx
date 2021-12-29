@@ -13,43 +13,45 @@ import './styles.scss'
 
 var count = 0
 export function Home() {
+        toast.success("Reset success!")
+    
     const { luckPlay, message, handleIsactive, isActive, img } = useContext(AuthContext)
     const [cont, setCont] = useState(0)
 
     function handleStep(newCont: number) {
         count++;
-        
+
         console.log(img, message)
-        if (count<=3) {
+        if (count <= 3) {
             setCont(newCont + 1)
-        } 
-        if (count==4) {
+        }
+        if (count == 4) {
             handleIsactive(false);
             toast.success('Todos jogadores nesse pote já foram sorteados')
             setCont(newCont + 1)
-            count=0
+            count = 0
         }
 
         luckPlay(cont)
     }
 
     async function handleReset() {
-        const { data } = await api.post('/reset')
-        
-        toast.success(data.message)
+        await api.post('/reset')
+
+        window.location.reload();
     }
 
 
     return (
         <>
             <div>
-                <Toaster/>
+                <Toaster />
                 <Luck />
                 {isActive == true ?
                     <button className="button-luck" onClick={() => handleStep(cont)}>SORTEAR</button>
                     : null
                 }
-                  <button className="button-reset" onClick={() => handleReset()}>RESET</button>
+                <button className="button-reset" onClick={() => handleReset()}>RESET</button>
             </div>
             <div className="contanier-home">
                 <Team1 team="Tolima" />
