@@ -8,12 +8,22 @@ import { Team4 } from '../Team4/Teams'
 import './styles.scss'
 
 
+var count = 0
 export function Home() {
-    const { luckPlay } = useContext(AuthContext)
+    const { luckPlay, message, handleIsactive, isActive, img } = useContext(AuthContext)
     const [cont, setCont] = useState(0)
 
     function handleStep(newCont: number) {
-        setCont(newCont + 1)
+        count++;
+        
+        console.log(img, message)
+        if (count<=3) {
+            setCont(newCont + 1)
+        } 
+        if (count==5) {
+            handleIsactive(false);
+            count =0;
+        }
 
         luckPlay(cont)
     }
@@ -23,7 +33,10 @@ export function Home() {
         <>
             <div>
                 <Luck />
-                <button className="button-luck" onClick={() => handleStep(cont)}>SORTEAR</button>
+                {isActive == true ?
+                    <button className="button-luck" onClick={() => handleStep(cont)}>SORTEAR</button>
+                    : null
+                }
             </div>
             <div className="contanier-home">
                 <Team1 team="Tolima" />

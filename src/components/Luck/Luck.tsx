@@ -21,7 +21,7 @@ export function Luck() {
     const [img3, setImg3] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [img4, setImg4] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [bowl, setBowl] = useState('');
-    const { handleBowl } = useContext(AuthContext)
+    const { handleBowl, handleIsactive,handleClearMessage } = useContext(AuthContext)
 
 
     async function handleListPlays() {
@@ -48,6 +48,8 @@ export function Luck() {
             }
             
         })
+        handleIsactive(true)
+        handleClearMessage()
     }
 
 

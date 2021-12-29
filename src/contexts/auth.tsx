@@ -87,6 +87,13 @@ type AuthContextData = {
 
     handleBowl: (newBowl: string) => void;
     luckPlay: (numberBowl: number) => void;
+
+    message: string;
+    handleIsactive: (newIsActive:boolean) => void;
+    isActive: boolean;
+
+    handleClearMessage: () => void;
+    img:string;
 }
 
 export const AuthContext = createContext({} as AuthContextData);
@@ -156,6 +163,10 @@ export function AuthProvider(props: AuthProvider) {
     const [img71, setImg71] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [img72, setImg72] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
 
+    const [message, setMessage] = useState('')
+    const [isActive, setIsActive] = useState(false)
+    const [img, setImg] = useState('')
+
     async function signIn(githubCode: string) {
         const response = await api.post<AutheResponse>('/authenticate', {
             code: githubCode,
@@ -173,11 +184,23 @@ export function AuthProvider(props: AuthProvider) {
         setBowl(newBowl)
     }
 
+    function handleIsactive(newIsActive:boolean) {
+        setIsActive(newIsActive)
+    }
+
+    function handleClearMessage() {
+        setMessage('')
+    }
+
 
     async function luckPlay(numberBowl: number) {
         const { data } = await api.get(`/luck?bowl=${bowl}`)
-        const { Message } = data;
-        if (Message != "Todos jogadores nesse pote já foram sorteados") {
+        const { message, img } = data;
+
+        setImg(img)
+        console.log(img)
+
+        if (img) {
             const { img } = data;
             switch (numberBowl) {
                 // LOTE 01:
@@ -329,6 +352,8 @@ export function AuthProvider(props: AuthProvider) {
                     break;
 
             }
+        } else {
+            setMessage(message);
         }
 
     }
@@ -411,7 +436,12 @@ export function AuthProvider(props: AuthProvider) {
             img69,
             img70,
             img71,
-            img72
+            img72,
+            message,
+            handleIsactive,
+            isActive,
+            handleClearMessage,
+            img,
         }}>
             {props.children}
         </AuthContext.Provider>
