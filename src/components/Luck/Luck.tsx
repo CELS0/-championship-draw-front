@@ -21,7 +21,7 @@ export function Luck() {
     const [img3, setImg3] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [img4, setImg4] = useState('https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg')
     const [bowl, setBowl] = useState('');
-    const { handleBowl} = useContext(AuthContext)
+    const { handleBowl } = useContext(AuthContext)
 
 
     async function handleListPlays() {
@@ -29,21 +29,24 @@ export function Luck() {
 
         handleBowl(bowl)
 
+        var count = 0;
         data.map(async play => {
-            switch (play.id) {
-                case 6:
+            count++;
+            switch (count) {
+                case 1:
                     setImg1(play.img)
                     break;
-                case 7:
+                case 2:
                     setImg2(play.img)
                     break;
-                case 8:
+                case 3:
                     setImg3(play.img)
                     break;
-                case 9:
+                case 4:
                     setImg4(play.img)
                     break;
             }
+            
         })
     }
 
