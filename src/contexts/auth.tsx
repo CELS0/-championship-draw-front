@@ -176,157 +176,159 @@ export function AuthProvider(props: AuthProvider) {
 
     async function luckPlay(numberBowl: number) {
         const { data } = await api.get(`/luck?bowl=${bowl}`)
-        const { img } = data;
+        const { Message } = data;
+        if (Message != "Todos jogadores nesse pote já foram sorteados") {
+            const { img } = data;
+            switch (numberBowl) {
+                // LOTE 01:
+                case 0:
+                    setImg1(img)
+                    break;
+                case 1:
+                    setImg21(img)
+                    break;
+                case 2:
+                    setImg41(img)
+                    break;
+                case 3:
+                    setImg61(img)
+                    break;
+                case 4:
+                    setImg2(img)
+                    break;
+                case 5:
+                    setImg22(img)
+                    break;
+                case 6:
+                    setImg42(img)
+                    break;
+                case 7:
+                    setImg62(img)
+                    break;
+                case 8:
+                    setImg3(img)
+                    break;
+                case 9:
+                    setImg23(img)
+                    break;
+                case 10:
+                    setImg43(img)
+                    break;
+                case 11:
+                    setImg63(img)
+                    break;
+                case 12:
+                    setImg4(img)
+                    break;
+                case 13:
+                    setImg24(img)
+                    break;
+                case 14:
+                    setImg44(img)
+                    break;
+                case 15:
+                    setImg64(img)
+                    break;
+                // LOTE 02:
+                case 16:
+                    setImg5(img)
+                    break;
+                case 17:
+                    setImg25(img)
+                    break;
+                case 18:
+                    setImg45(img)
+                    break;
+                case 19:
+                    setImg65(img)
+                    break;
+                case 20:
+                    setImg6(img)
+                    break;
+                case 21:
+                    setImg26(img)
+                    break;
+                case 22:
+                    setImg46(img)
+                    break;
+                case 23:
+                    setImg66(img)
+                    break;
+                case 24:
+                    setImg7(img)
+                    break;
+                case 25:
+                    setImg27(img)
+                    break;
+                case 26:
+                    setImg47(img)
+                    break;
+                case 27:
+                    setImg67(img)
+                    break;
+                case 28:
+                    setImg8(img)
+                    break;
+                case 29:
+                    setImg28(img)
+                    break;
+                case 30:
+                    setImg48(img)
+                    break;
+                case 31:
+                    setImg68(img)
+                    break;
+                // LOTE 03:
+                case 32:
+                    setImg9(img)
+                    break;
+                case 33:
+                    setImg29(img)
+                    break;
+                case 34:
+                    setImg49(img)
+                    break;
+                case 35:
+                    setImg69(img)
+                    break;
+                case 36:
+                    setImg10(img)
+                    break;
+                case 37:
+                    setImg30(img)
+                    break;
+                case 38:
+                    setImg50(img)
+                    break;
+                case 39:
+                    setImg70(img)
+                    break;
+                case 40:
+                    setImg11(img)
+                    break;
+                case 41:
+                    setImg31(img)
+                    break;
+                case 42:
+                    setImg51(img)
+                    break;
+                case 43:
+                    setImg71(img)
+                    break;
+                case 44:
+                    setImg12(img)
+                    break;
+                case 45:
+                    setImg32(img)
+                    break;
+                case 46:
+                    setImg52(img)
+                    break;
+                case 47:
+                    setImg72(img)
+                    break;
 
-        switch (numberBowl) {
-            // LOTE 01:
-            case 0:
-                setImg1(img)
-                break;
-            case 1:
-                setImg21(img)
-                break;
-            case 2:
-                setImg41(img)
-                break;
-            case 3:
-                setImg61(img)
-                break;
-            case 4:
-                setImg2(img)
-                break;
-            case 5:
-                setImg22(img)
-                break;
-            case 6:
-                setImg42(img)
-                break;
-            case 7:
-                setImg62(img)
-                break;
-            case 8:
-                setImg3(img)
-                break;
-            case 9:
-                setImg23(img)
-                break;
-            case 10:
-                setImg43(img)
-                break;
-            case 11:
-                setImg63(img)
-                break;
-            case 12:
-                setImg4(img)
-                break;
-            case 13:
-                setImg24(img)
-                break;
-            case 14:
-                setImg44(img)
-                break;
-            case 15:
-                setImg64(img)
-                break;
-            // LOTE 02:
-            case 16:
-                setImg5(img)
-                break;
-            case 17:
-                setImg25(img)
-                break;
-            case 18:
-                setImg45(img)
-                break;
-            case 19:
-                setImg65(img)
-                break;
-            case 20:
-                setImg6(img)
-                break;
-            case 21:
-                setImg26(img)
-                break;
-            case 22:
-                setImg46(img)
-                break;
-            case 23:
-                setImg66(img)
-                break;
-            case 24:
-                setImg7(img)
-                break;
-            case 25:
-                setImg27(img)
-                break;
-            case 26:
-                setImg47(img)
-                break;
-            case 27:
-                setImg67(img)
-                break;
-            case 28:
-                setImg8(img)
-                break;
-            case 29:
-                setImg28(img)
-                break;
-            case 30:
-                setImg48(img)
-                break;
-            case 31:
-                setImg68(img)
-                break;
-            // LOTE 03:
-            case 32:
-                setImg9(img)
-                break;
-            case 33:
-                setImg29(img)
-                break;
-            case 34:
-                setImg49(img)
-                break;
-            case 35:
-                setImg69(img)
-                break;
-            case 36:
-                setImg10(img)
-                break;
-            case 37:
-                setImg30(img)
-                break;
-            case 38:
-                setImg50(img)
-                break;
-            case 39:
-                setImg70(img)
-                break;
-            case 40:
-                setImg11(img)
-                break;
-            case 41:
-                setImg31(img)
-                break;
-            case 42:
-                setImg51(img)
-                break;
-            case 43:
-                setImg71(img)
-                break;
-            case 44:
-                setImg12(img)
-                break;
-            case 45:
-                setImg32(img)
-                break;
-            case 46:
-                setImg52(img)
-                break;
-            case 47:
-                setImg72(img)
-                break;
-
+            }
         }
 
     }
@@ -360,17 +362,18 @@ export function AuthProvider(props: AuthProvider) {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ signInUrl, user, handleBowl, bowl, luckPlay, 
+        <AuthContext.Provider value={{
+            signInUrl, user, handleBowl, bowl, luckPlay,
             img1,
-            img2, 
-            img3, 
-            img4, 
-            img5, 
-            img6, 
-            img7, 
-            img8, 
-            img9, 
-            img10, 
+            img2,
+            img3,
+            img4,
+            img5,
+            img6,
+            img7,
+            img8,
+            img9,
+            img10,
             img11,
             img12,
             img21,
@@ -409,7 +412,7 @@ export function AuthProvider(props: AuthProvider) {
             img70,
             img71,
             img72
-            }}>
+        }}>
             {props.children}
         </AuthContext.Provider>
     )
