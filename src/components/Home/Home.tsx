@@ -21,7 +21,6 @@ export function Home() {
   function handleStep(newCont: number) {
     count++;
 
-    console.log(img, message);
     if (count <= 3) {
       setCont(newCont + 1);
     }

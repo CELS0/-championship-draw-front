@@ -15,15 +15,12 @@ export function Modal() {
   function handleSaverPlayer() {
     setModal(false);
 
-    console.log('----------------->', namePlayer, photoPlayer, bowlPlayer )
     if (
       photoPlayer ===
       "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg"
     ) {
-      console.log("DEuuuu bomm");
       createPlayers({ name: name.toUpperCase(), photo, bowl, is_active: true });
     } else {
-      console.log("passei aqui");
       updadePlayer(name.toUpperCase(), photo, bowl);
     }
   }

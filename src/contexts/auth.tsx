@@ -302,7 +302,6 @@ export function AuthProvider(props: AuthProvider) {
       switch (Number(numberBowl)) {
         // LOTE 01:
         case 0:
-        console.log('passsei aqui')
           setImg1(photo);
           break;
         case 1:
