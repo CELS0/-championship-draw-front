@@ -91,7 +91,6 @@ const createPlayers = (data: IPlay) => {
   db.push(data);
 
   setTimeout(() => {
-    console.log("deu bommmmaaaaaaaaaaaa", db);
     localStorage.setItem("players", JSON.stringify(db));
   }, 1000);
 };
