@@ -1,12 +1,12 @@
 import "./styles.scss";
 
 import { AiOutlineClose } from "react-icons/ai";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/auth";
-import { createPlayers } from "../../services/api";
+import { createPlayers, getBowls } from "../../services/api";
 
 export function Modal() {
-  const { setModal } = useContext(AuthContext);
+  const { setModal, indexPlayer } = useContext(AuthContext);
   const [photo, setPhoto] = useState("");
   const [bowl, setbowl] = useState(0);
   const [name, setName] = useState("");
@@ -14,6 +14,23 @@ export function Modal() {
   function handleSaverPlayer() {
     setModal(false);
     createPlayers({ name: name.toUpperCase(), photo, bowl, is_active: true });
+  }
+
+  useEffect(() => {
+    handleAddPlayer();
+  }, []);
+
+  function handleAddPlayer() {
+    const result = getBowls();
+
+    setName(result[indexPlayer].name);
+    setPhoto(
+      result[indexPlayer].photo ===
+        "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg"
+        ? ""
+        : result[indexPlayer].photo
+    );
+    setbowl(result[indexPlayer].bowl);
   }
 
   return (
@@ -26,16 +43,19 @@ export function Modal() {
 
         <h4>Nome:</h4>
         <input
+          value={name}
           onChange={(e) => setName(e.target.value)}
           className="modal-input"
         ></input>
         <h4>Image:</h4>
         <input
+          value={photo}
           onChange={(e) => setPhoto(e.target.value)}
           className="modal-input"
         ></input>
         <h4>Pote:</h4>
         <input
+          value={bowl}
           onChange={(e) => setbowl(Number(e.target.value))}
           type={"number"}
           className="modal-input"

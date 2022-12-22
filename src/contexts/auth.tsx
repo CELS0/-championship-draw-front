@@ -93,6 +93,8 @@ type AuthContextData = {
 
   handleClearMessage: () => void;
   img: string;
+  setIndexPlayer: (value:number) => void
+  indexPlayer: number
 
   modal: boolean;
 };
@@ -263,6 +265,7 @@ export function AuthProvider(props: AuthProvider) {
 
   const [message, setMessage] = useState("");
   const [isActive, setIsActive] = useState(false);
+  const [indexPlayer, setIndexPlayer] = useState(0)
   const [img, setImg] = useState("");
 
   const [modal, setModal] = useState(false)
@@ -441,6 +444,8 @@ export function AuthProvider(props: AuthProvider) {
         modal,
         setModal,
         user,
+        setIndexPlayer,
+        indexPlayer,
         handleBowl,
         bowl,
         luckPlay,

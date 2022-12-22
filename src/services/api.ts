@@ -2,15 +2,46 @@ export type IPlay = {
   name: string;
   photo: string;
   bowl: number;
-  is_active: boolean;
+  is_active: boolean | null;
 };
 
 const db: IPlay[] = [];
 
 let bowl: number = 1;
 
-const getBowls = (index: number): IPlay[] => {
-  bowl = index;
+const bowlDefault: IPlay[] = [
+  {
+    name: "",
+    photo:
+      "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg",
+    is_active: true,
+    bowl,
+  },
+  {
+    name: "",
+    photo:
+      "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg",
+    is_active: true,
+    bowl,
+  },
+  {
+    name: "",
+    photo:
+      "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg",
+    is_active: true,
+    bowl,
+  },
+  {
+    name: "",
+    photo:
+      "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg",
+    is_active: true,
+    bowl,
+  },
+];
+
+const getBowls = (index?: number): IPlay[] => {
+  bowl = index ? index : bowl;
   let result: IPlay[] = [];
   db.forEach((player) => {
     const onePlayer = player.bowl === index;
@@ -18,6 +49,10 @@ const getBowls = (index: number): IPlay[] => {
       result.push(player);
     }
   });
+
+  if(result.length === 0) {
+    return bowlDefault
+  }
 
   return result;
 };
