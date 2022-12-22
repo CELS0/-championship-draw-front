@@ -123,6 +123,7 @@ const resetPlayers = () => {
   db.forEach((player) => {
     player.is_active = false;
   });
+  localStorage.setItem("players", JSON.stringify(db));
 };
 
 const api = "";
