@@ -96,7 +96,12 @@ type AuthContextData = {
   setIndexPlayer: (value:number) => void
   indexPlayer: number
 
+  getUpdadePlayer: (name: string, photo: string, bowl: number) => void;
+
   modal: boolean;
+  photoPlayer: string;
+  namePlayer: string;
+  bowlPlayer: number
 };
 
 export const AuthContext = createContext({} as AuthContextData);
@@ -267,6 +272,9 @@ export function AuthProvider(props: AuthProvider) {
   const [isActive, setIsActive] = useState(false);
   const [indexPlayer, setIndexPlayer] = useState(0)
   const [img, setImg] = useState("");
+  const [photoPlayer, setPhotoPlayer] = useState("");
+  const [bowlPlayer, setbowlPlayer] = useState(0);
+  const [namePlayer, setNamePlayer] = useState("");
 
   const [modal, setModal] = useState(false)
 
@@ -276,6 +284,12 @@ export function AuthProvider(props: AuthProvider) {
 
   function handleIsactive(newIsActive: boolean) {
     setIsActive(newIsActive);
+  }
+
+  function getUpdadePlayer (name: string, photo: string, bowl: number) {
+    setNamePlayer(name)
+    setPhotoPlayer(photo)
+    setbowlPlayer(bowl)
   }
 
   function handleClearMessage() {
@@ -500,8 +514,12 @@ export function AuthProvider(props: AuthProvider) {
         message,
         handleIsactive,
         isActive,
+        getUpdadePlayer,
         handleClearMessage,
         img,
+        photoPlayer,
+        namePlayer,
+        bowlPlayer
       }}
     >
       {props.children}

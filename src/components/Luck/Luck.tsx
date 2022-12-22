@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { BiSearchAlt } from "react-icons/bi";
 import "./styles.scss";
-import { getBowls } from "../../services/api";
+import { getBowls, getPlayerByPhoto } from "../../services/api";
 import { AuthContext } from "../../contexts/auth";
 
 type IReponse = {
@@ -28,7 +28,12 @@ export function Luck() {
     "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg"
   );
   const [bowl, setBowl] = useState(1);
-  const { handleIsactive, setModal, modal } = useContext(AuthContext);
+  const { handleIsactive, setModal, modal, getUpdadePlayer } =
+    useContext(AuthContext);
+
+  const [photoPlayer, setPhotoPlayer] = useState("");
+  const [bowlPlayer, setbowlPlayer] = useState(0);
+  const [namePlayer, setNamePlayer] = useState("");
 
   useEffect(() => {
     handleListPlays();
@@ -58,6 +63,20 @@ export function Luck() {
     });
   }
 
+  function handleUpdatePlayer(photoPlayer: string) {
+
+    const player = getPlayerByPhoto(photoPlayer);
+
+    if (player) {
+      const { name, photo, bowl } = player;
+      getUpdadePlayer(name, photo, bowl);
+    }else{
+      getUpdadePlayer('', '', 0);
+    }
+
+    setModal(true);
+  }
+
   return (
     <div className="container-luck">
       <img src="https://uploadnodejs.s3.amazonaws.com/a7ac5fcf44c1a2f79eba08652301fcdc-maxresdefault.jpg" />
@@ -65,10 +84,10 @@ export function Luck() {
         <h1>SORTEIO CAMPEONATO DOS FRANÇAS</h1>
         <h2>Jogadores do Pote</h2>
         <div>
-          <img src={img1} onClick={() => setModal(true)} />
-          <img src={img2} onClick={() => setModal(true)} />
-          <img src={img3} onClick={() => setModal(true)} />
-          <img src={img4} onClick={() => setModal(true)} />
+          <img src={img1} onClick={() => handleUpdatePlayer(img1)} />
+          <img src={img2} onClick={() => handleUpdatePlayer(img2)} />
+          <img src={img3} onClick={() => handleUpdatePlayer(img3)} />
+          <img src={img4} onClick={() => handleUpdatePlayer(img4)} />
         </div>
         <input
           type="number"

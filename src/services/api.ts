@@ -50,8 +50,8 @@ const getBowls = (index?: number): IPlay[] => {
     }
   });
 
-  if(result.length === 0) {
-    return bowlDefault
+  if (result.length === 0) {
+    return bowlDefault;
   }
 
   return result;
@@ -85,6 +85,18 @@ const createPlayers = (data: IPlay) => {
   db.push(data);
 };
 
+const getPlayerByPhoto = (photo: string): IPlay => {
+  let result: IPlay[] = [];
+  db.forEach((player) => {
+    const onePlayer = player.bowl === bowl && player.photo === photo;
+    if (onePlayer) {
+      result.push(player);
+    }
+  });
+
+  return result[0];
+};
+
 const api = "";
 
-export { getBowls, api, luckGetPlay, createPlayers };
+export { getBowls, api, luckGetPlay, createPlayers, getPlayerByPhoto };

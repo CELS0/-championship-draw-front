@@ -6,7 +6,8 @@ import { AuthContext } from "../../contexts/auth";
 import { createPlayers, getBowls } from "../../services/api";
 
 export function Modal() {
-  const { setModal, indexPlayer } = useContext(AuthContext);
+  const { setModal, namePlayer, photoPlayer, bowlPlayer } =
+    useContext(AuthContext);
   const [photo, setPhoto] = useState("");
   const [bowl, setbowl] = useState(0);
   const [name, setName] = useState("");
@@ -23,14 +24,14 @@ export function Modal() {
   function handleAddPlayer() {
     const result = getBowls();
 
-    setName(result[indexPlayer].name);
+    setName(namePlayer);
     setPhoto(
-      result[indexPlayer].photo ===
+      photoPlayer ===
         "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg"
         ? ""
-        : result[indexPlayer].photo
+        : photoPlayer
     );
-    setbowl(result[indexPlayer].bowl);
+    setbowl(bowlPlayer);
   }
 
   return (
