@@ -5,7 +5,13 @@ export type IPlay = {
   is_active: boolean | null;
 };
 
-const db: IPlay[] = [];
+let db: IPlay[] = [];
+
+const initPlayers = () => {
+  const dbtes = localStorage.getItem("players");
+  const localDb = JSON.parse(dbtes ? dbtes : "");
+  db = localDb;
+};
 
 let bowl: number = 1;
 
@@ -83,6 +89,11 @@ const luckGetPlay = (): IPlay => {
 
 const createPlayers = (data: IPlay) => {
   db.push(data);
+
+  setTimeout(() => {
+    console.log("deu bommmmaaaaaaaaaaaa", db);
+    localStorage.setItem("players", JSON.stringify(db));
+  }, 1000);
 };
 
 const getPlayerByPhoto = (photo: string): IPlay => {
@@ -106,8 +117,24 @@ const updadePlayer = (name: string, photo: string, bowl: number) => {
       player.bowl = bowl;
     }
   });
+  localStorage.setItem("players", JSON.stringify(db));
+};
+
+const resetPlayers = () => {
+  db.forEach((player) => {
+    player.is_active = false;
+  });
 };
 
 const api = "";
 
-export { getBowls, api, luckGetPlay, createPlayers, getPlayerByPhoto, updadePlayer };
+export {
+  getBowls,
+  api,
+  luckGetPlay,
+  createPlayers,
+  getPlayerByPhoto,
+  updadePlayer,
+  initPlayers,
+  resetPlayers
+};

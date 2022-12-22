@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/auth";
 import { Luck } from "../Luck/Luck";
 import { Team1 } from "../Team1/Teams";
@@ -9,6 +9,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 import "./styles.scss";
 import { Modal } from "../Modal/Modal";
+import { initPlayers, resetPlayers } from "../../services/api";
 
 var count = 0;
 export function Home() {
@@ -34,11 +35,14 @@ export function Home() {
     luckPlay(cont);
   }
 
-  async function handleReset() {
-    // await api.post('/reset')
+  useEffect(() => {
+    initPlayers();
+  }, []);
 
+  async function handleReset() {
     toast.success("Reset success!");
     setTimeout(() => {
+      resetPlayers()
       window.location.reload();
     }, 1000);
   }
