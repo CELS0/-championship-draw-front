@@ -97,6 +97,17 @@ const getPlayerByPhoto = (photo: string): IPlay => {
   return result[0];
 };
 
+const updadePlayer = (name: string, photo: string, bowl: number) => {
+  db.forEach((player) => {
+    const onePlayer = player.bowl === bowl && player.photo === photo;
+    if (onePlayer) {
+      player.name = name;
+      player.photo = photo;
+      player.bowl = bowl;
+    }
+  });
+};
+
 const api = "";
 
-export { getBowls, api, luckGetPlay, createPlayers, getPlayerByPhoto };
+export { getBowls, api, luckGetPlay, createPlayers, getPlayerByPhoto, updadePlayer };

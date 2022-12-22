@@ -3,7 +3,7 @@ import "./styles.scss";
 import { AiOutlineClose } from "react-icons/ai";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/auth";
-import { createPlayers, getBowls } from "../../services/api";
+import { createPlayers, getBowls, updadePlayer } from "../../services/api";
 
 export function Modal() {
   const { setModal, namePlayer, photoPlayer, bowlPlayer } =
@@ -14,7 +14,18 @@ export function Modal() {
 
   function handleSaverPlayer() {
     setModal(false);
-    createPlayers({ name: name.toUpperCase(), photo, bowl, is_active: true });
+
+    console.log('----------------->', namePlayer, photoPlayer, bowlPlayer )
+    if (
+      photoPlayer ===
+      "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg"
+    ) {
+      console.log("DEuuuu bomm");
+      createPlayers({ name: name.toUpperCase(), photo, bowl, is_active: true });
+    } else {
+      console.log("passei aqui");
+      updadePlayer(name.toUpperCase(), photo, bowl);
+    }
   }
 
   useEffect(() => {

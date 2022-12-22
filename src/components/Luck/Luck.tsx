@@ -31,9 +31,9 @@ export function Luck() {
   const { handleIsactive, setModal, modal, getUpdadePlayer } =
     useContext(AuthContext);
 
-  const [photoPlayer, setPhotoPlayer] = useState("");
-  const [bowlPlayer, setbowlPlayer] = useState(0);
-  const [namePlayer, setNamePlayer] = useState("");
+  // const [photoPlayer, setPhotoPlayer] = useState("");
+  // const [bowlPlayer, setbowlPlayer] = useState(0);
+  // const [namePlayer, setNamePlayer] = useState("");
 
   useEffect(() => {
     handleListPlays();
@@ -71,7 +71,7 @@ export function Luck() {
       const { name, photo, bowl } = player;
       getUpdadePlayer(name, photo, bowl);
     }else{
-      getUpdadePlayer('', '', 0);
+      getUpdadePlayer('', 'https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg', 0);
     }
 
     setModal(true);
