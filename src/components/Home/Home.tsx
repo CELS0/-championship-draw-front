@@ -7,7 +7,7 @@ import { Team3 } from "../Team3/Teams";
 import { Team4 } from "../Team4/Teams";
 import toast, { Toaster } from "react-hot-toast";
 
-import "./styles.css";
+import "./styles.scss";
 import { Modal } from "../Modal/Modal";
 import { initPlayers, resetPlayers } from "../../services/api";
 
