@@ -9,7 +9,7 @@ let db: IPlay[] = [];
 
 const initPlayers = () => {
   const dbtes = localStorage.getItem("players");
-  const localDb = JSON.parse(dbtes ? dbtes : "");
+  const localDb = JSON.parse(dbtes ? dbtes : "{}");
   db = localDb;
 };
 
@@ -45,6 +45,7 @@ const bowlDefault: IPlay[] = [
     bowl,
   },
 ];
+323;
 
 const getBowls = (index?: number): IPlay[] => {
   bowl = index ? index : bowl;
@@ -52,8 +53,9 @@ const getBowls = (index?: number): IPlay[] => {
   db.forEach((player) => {
     const onePlayer = player.bowl === index;
     if (onePlayer) {
-      result.push(player);
+      return result.push(player);
     }
+    return;
   });
 
   if (result.length === 0) {
@@ -136,5 +138,5 @@ export {
   getPlayerByPhoto,
   updadePlayer,
   initPlayers,
-  resetPlayers
+  resetPlayers,
 };
