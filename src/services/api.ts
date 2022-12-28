@@ -10,13 +10,12 @@ let db: IPlay[] = [];
 const initPlayers = () => {
   const dbtes = localStorage.getItem("players");
 
-  console.log('bbbbbbbbbbbbbbbb', dbtes)
-  if(dbtes !== null){
-    console.log("passei aqui")
+  console.log("bbbbbbbbbbbbbbbb", dbtes);
+  if (dbtes !== null) {
+    console.log("passei aqui");
     const localDb = JSON.parse(dbtes ? dbtes : "{}");
     db = localDb;
   }
-
 };
 
 let bowl: number = 1;
@@ -64,6 +63,18 @@ const getBowls = (index?: number): IPlay[] => {
     return;
   });
 
+  if (result.length < 4) {
+    for (let i = 0; i < 4 - result.length; i++) {
+      result.push({
+        name: "",
+        photo:
+          "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg",
+        is_active: true,
+        bowl,
+      });
+    }
+  }
+
   if (result.length === 0) {
     return bowlDefault;
   }
@@ -73,8 +84,6 @@ const getBowls = (index?: number): IPlay[] => {
 const luckGetPlay = (): IPlay => {
   let indexPlay = 0;
   let playersBowl: IPlay[] = [];
-
-
 
   (db === undefined ? [] : db).forEach((player) => {
     const onePlayer = player.bowl === bowl && player.is_active === true;
