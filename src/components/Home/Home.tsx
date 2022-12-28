@@ -13,7 +13,7 @@ import { initPlayers, resetPlayers } from "../../services/api";
 
 var count = 0;
 export function Home() {
-  const { luckPlay, message, handleIsactive, modal, img } =
+  const { luckPlay, message, handleIsactive, modal, isActive } =
     useContext(AuthContext);
 
   const [cont, setCont] = useState(0);
@@ -25,7 +25,7 @@ export function Home() {
       setCont(newCont + 1);
     }
     if (count == 4) {
-      handleIsactive(false);
+      handleIsactive(true);
       toast.success("Todos jogadores nesse pote já foram sorteados");
       setCont(newCont + 1);
       count = 0;
@@ -41,7 +41,7 @@ export function Home() {
   async function handleReset() {
     toast.success("Reset success!");
     setTimeout(() => {
-      resetPlayers()
+      resetPlayers();
       window.location.reload();
     }, 1000);
   }
@@ -51,9 +51,11 @@ export function Home() {
       <div>
         <Toaster />
         <Luck />
-        <button className="button-luck" onClick={() => handleStep(cont)}>
-          SORTEAR
-        </button>
+        {!isActive && (
+          <button className="button-luck" onClick={() => handleStep(cont)}>
+            SORTEAR
+          </button>
+        )}
         <button className="button-reset" onClick={() => handleReset()}>
           RESET
         </button>
