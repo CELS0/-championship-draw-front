@@ -79,7 +79,7 @@ export function Luck() {
 
   return (
     <div className="container-luck">
-      <img src="https://uploadnodejs.s3.amazonaws.com/a7ac5fcf44c1a2f79eba08652301fcdc-maxresdefault.jpg" />
+      <img src="https://uploadnodejs.s3.amazonaws.com/WhatsApp+Image+2022-12-28+at+19.27.43(1).jpeg" />
       <div className="content-luck">
         <h1>SORTEIO CAMPEONATO DOS FRANÇAS</h1>
         <h2>Jogadores do Pote</h2>
@@ -98,7 +98,7 @@ export function Luck() {
           <BiSearchAlt />
         </button>
       </div>
-      <img src="https://uploadnodejs.s3.amazonaws.com/d4d542df290b9cfd6173708e6d7b80d8-messi_graphic.jpg" />
+      <img src="https://uploadnodejs.s3.amazonaws.com/WhatsApp+Image+2022-12-28+at+19.28.15(1).jpeg" />
     </div>
   );
 }
