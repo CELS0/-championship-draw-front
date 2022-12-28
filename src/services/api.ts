@@ -141,7 +141,7 @@ const updadePlayer = (name: string, photo: string, bowl: number) => {
 
 const resetPlayers = () => {
   db.forEach((player) => {
-    player.is_active = false;
+    player.is_active = true;
   });
   localStorage.setItem("players", JSON.stringify(db));
 };
