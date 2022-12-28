@@ -9,8 +9,14 @@ let db: IPlay[] = [];
 
 const initPlayers = () => {
   const dbtes = localStorage.getItem("players");
-  const localDb = JSON.parse(dbtes ? dbtes : "{}");
-  db = localDb;
+
+  console.log('bbbbbbbbbbbbbbbb', dbtes)
+  if(dbtes !== null){
+    console.log("passei aqui")
+    const localDb = JSON.parse(dbtes ? dbtes : "{}");
+    db = localDb;
+  }
+
 };
 
 let bowl: number = 1;
@@ -67,7 +73,10 @@ const getBowls = (index?: number): IPlay[] => {
 const luckGetPlay = (): IPlay => {
   let indexPlay = 0;
   let playersBowl: IPlay[] = [];
-  db.forEach((player) => {
+
+
+
+  (db === undefined ? [] : db).forEach((player) => {
     const onePlayer = player.bowl === bowl && player.is_active === true;
     if (onePlayer) {
       playersBowl.push(player);
