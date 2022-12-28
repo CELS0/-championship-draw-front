@@ -3,10 +3,15 @@ import "./styles.scss";
 import { AiOutlineClose } from "react-icons/ai";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/auth";
-import { createPlayers, getBowls, updadePlayer } from "../../services/api";
+import {
+  createPlayers,
+  generateId,
+  getBowls,
+  updadePlayer,
+} from "../../services/api";
 
 export function Modal() {
-  const { setModal, namePlayer, photoPlayer, bowlPlayer } =
+  const { setModal, namePlayer, idPlayer, photoPlayer, bowlPlayer } =
     useContext(AuthContext);
   const [photo, setPhoto] = useState("");
   const [bowl, setbowl] = useState(0);
@@ -19,9 +24,15 @@ export function Modal() {
       photoPlayer ===
       "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg"
     ) {
-      createPlayers({ name: name.toUpperCase(), photo, bowl, is_active: true });
+      createPlayers({
+        id: generateId(),
+        name: name.toUpperCase(),
+        photo,
+        bowl,
+        is_active: true,
+      });
     } else {
-      updadePlayer(name.toUpperCase(), photo, bowl);
+      updadePlayer(idPlayer, name.toUpperCase(), photo, bowl);
     }
   }
 

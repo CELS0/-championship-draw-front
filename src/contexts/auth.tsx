@@ -85,7 +85,7 @@ type AuthContextData = {
 
   handleBowl: (newBowl: string) => void;
   luckPlay: (numberBowl: number) => void;
-  setModal:(value: boolean) => void;
+  setModal: (value: boolean) => void;
 
   message: string;
   handleIsactive: (newIsActive: boolean) => void;
@@ -93,15 +93,21 @@ type AuthContextData = {
 
   handleClearMessage: () => void;
   img: string;
-  setIndexPlayer: (value:number) => void
-  indexPlayer: number
+  setIndexPlayer: (value: number) => void;
+  indexPlayer: number;
 
-  getUpdadePlayer: (name: string, photo: string, bowl: number) => void;
+  getUpdadePlayer: (
+    id: number,
+    name: string,
+    photo: string,
+    bowl: number
+  ) => void;
 
   modal: boolean;
   photoPlayer: string;
   namePlayer: string;
-  bowlPlayer: number
+  bowlPlayer: number;
+  idPlayer: number;
 };
 
 export const AuthContext = createContext({} as AuthContextData);
@@ -270,13 +276,14 @@ export function AuthProvider(props: AuthProvider) {
 
   const [message, setMessage] = useState("");
   const [isActive, setIsActive] = useState(false);
-  const [indexPlayer, setIndexPlayer] = useState(0)
+  const [indexPlayer, setIndexPlayer] = useState(0);
   const [img, setImg] = useState("");
   const [photoPlayer, setPhotoPlayer] = useState("");
+  const [idPlayer, setIdPlayer] = useState(0)
   const [bowlPlayer, setbowlPlayer] = useState(0);
   const [namePlayer, setNamePlayer] = useState("");
 
-  const [modal, setModal] = useState(false)
+  const [modal, setModal] = useState(false);
 
   function handleBowl(newBowl: string) {
     setBowl(newBowl);
@@ -286,10 +293,11 @@ export function AuthProvider(props: AuthProvider) {
     setIsActive(newIsActive);
   }
 
-  function getUpdadePlayer (name: string, photo: string, bowl: number) {
-    setNamePlayer(name)
-    setPhotoPlayer(photo)
-    setbowlPlayer(bowl)
+  function getUpdadePlayer(id: number,name: string, photo: string, bowl: number) {
+    setNamePlayer(name);
+    setPhotoPlayer(photo);
+    setbowlPlayer(bowl);
+    setIdPlayer(id)
   }
 
   function handleClearMessage() {
@@ -299,155 +307,155 @@ export function AuthProvider(props: AuthProvider) {
   async function luckPlay(numberBowl: number) {
     const result = luckGetPlay();
     const { photo } = result;
-      switch (Number(numberBowl)) {
-        // LOTE 01:
-        case 0:
-          setImg1(photo);
-          break;
-        case 1:
-          setImg21(photo);
-          break;
-        case 2:
-          setImg41(photo);
-          break;
-        case 3:
-          setImg61(photo);
-          break;
-        case 4:
-          setImg2(photo);
-          break;
-        case 5:
-          setImg22(photo);
-          break;
-        case 6:
-          setImg42(photo);
-          break;
-        case 7:
-          setImg62(photo);
-          break;
-        case 8:
-          setImg3(photo);
-          break;
-        case 9:
-          setImg23(photo);
-          break;
-        case 10:
-          setImg43(photo);
-          break;
-        case 11:
-          setImg63(photo);
-          break;
-        case 12:
-          setImg4(photo);
-          break;
-        case 13:
-          setImg24(photo);
-          break;
-        case 14:
-          setImg44(photo);
-          break;
-        case 15:
-          setImg64(photo);
-          break;
-        // LOTE 02:
-        case 16:
-          setImg5(photo);
-          break;
-        case 17:
-          setImg25(photo);
-          break;
-        case 18:
-          setImg45(photo);
-          break;
-        case 19:
-          setImg65(photo);
-          break;
-        case 20:
-          setImg6(photo);
-          break;
-        case 21:
-          setImg26(photo);
-          break;
-        case 22:
-          setImg46(photo);
-          break;
-        case 23:
-          setImg66(photo);
-          break;
-        case 24:
-          setImg7(photo);
-          break;
-        case 25:
-          setImg27(photo);
-          break;
-        case 26:
-          setImg47(photo);
-          break;
-        case 27:
-          setImg67(photo);
-          break;
-        case 28:
-          setImg8(photo);
-          break;
-        case 29:
-          setImg28(photo);
-          break;
-        case 30:
-          setImg48(photo);
-          break;
-        case 31:
-          setImg68(photo);
-          break;
-        // LOTE 03:
-        case 32:
-          setImg9(photo);
-          break;
-        case 33:
-          setImg29(photo);
-          break;
-        case 34:
-          setImg49(photo);
-          break;
-        case 35:
-          setImg69(photo);
-          break;
-        case 36:
-          setImg10(photo);
-          break;
-        case 37:
-          setImg30(photo);
-          break;
-        case 38:
-          setImg50(photo);
-          break;
-        case 39:
-          setImg70(photo);
-          break;
-        case 40:
-          setImg11(photo);
-          break;
-        case 41:
-          setImg31(photo);
-          break;
-        case 42:
-          setImg51(photo);
-          break;
-        case 43:
-          setImg71(photo);
-          break;
-        case 44:
-          setImg12(photo);
-          break;
-        case 45:
-          setImg32(photo);
-          break;
-        case 46:
-          setImg52(photo);
-          break;
-        case 47:
-          setImg72(photo);
-          break;
-      }
+    switch (Number(numberBowl)) {
+      // LOTE 01:
+      case 0:
+        setImg1(photo);
+        break;
+      case 1:
+        setImg21(photo);
+        break;
+      case 2:
+        setImg41(photo);
+        break;
+      case 3:
+        setImg61(photo);
+        break;
+      case 4:
+        setImg2(photo);
+        break;
+      case 5:
+        setImg22(photo);
+        break;
+      case 6:
+        setImg42(photo);
+        break;
+      case 7:
+        setImg62(photo);
+        break;
+      case 8:
+        setImg3(photo);
+        break;
+      case 9:
+        setImg23(photo);
+        break;
+      case 10:
+        setImg43(photo);
+        break;
+      case 11:
+        setImg63(photo);
+        break;
+      case 12:
+        setImg4(photo);
+        break;
+      case 13:
+        setImg24(photo);
+        break;
+      case 14:
+        setImg44(photo);
+        break;
+      case 15:
+        setImg64(photo);
+        break;
+      // LOTE 02:
+      case 16:
+        setImg5(photo);
+        break;
+      case 17:
+        setImg25(photo);
+        break;
+      case 18:
+        setImg45(photo);
+        break;
+      case 19:
+        setImg65(photo);
+        break;
+      case 20:
+        setImg6(photo);
+        break;
+      case 21:
+        setImg26(photo);
+        break;
+      case 22:
+        setImg46(photo);
+        break;
+      case 23:
+        setImg66(photo);
+        break;
+      case 24:
+        setImg7(photo);
+        break;
+      case 25:
+        setImg27(photo);
+        break;
+      case 26:
+        setImg47(photo);
+        break;
+      case 27:
+        setImg67(photo);
+        break;
+      case 28:
+        setImg8(photo);
+        break;
+      case 29:
+        setImg28(photo);
+        break;
+      case 30:
+        setImg48(photo);
+        break;
+      case 31:
+        setImg68(photo);
+        break;
+      // LOTE 03:
+      case 32:
+        setImg9(photo);
+        break;
+      case 33:
+        setImg29(photo);
+        break;
+      case 34:
+        setImg49(photo);
+        break;
+      case 35:
+        setImg69(photo);
+        break;
+      case 36:
+        setImg10(photo);
+        break;
+      case 37:
+        setImg30(photo);
+        break;
+      case 38:
+        setImg50(photo);
+        break;
+      case 39:
+        setImg70(photo);
+        break;
+      case 40:
+        setImg11(photo);
+        break;
+      case 41:
+        setImg31(photo);
+        break;
+      case 42:
+        setImg51(photo);
+        break;
+      case 43:
+        setImg71(photo);
+        break;
+      case 44:
+        setImg12(photo);
+        break;
+      case 45:
+        setImg32(photo);
+        break;
+      case 46:
+        setImg52(photo);
+        break;
+      case 47:
+        setImg72(photo);
+        break;
+    }
   }
 
   return (
@@ -518,7 +526,8 @@ export function AuthProvider(props: AuthProvider) {
         img,
         photoPlayer,
         namePlayer,
-        bowlPlayer
+        idPlayer,
+        bowlPlayer,
       }}
     >
       {props.children}

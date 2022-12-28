@@ -1,4 +1,5 @@
 export type IPlay = {
+  id: number;
   name: string;
   photo: string;
   bowl: number;
@@ -10,18 +11,20 @@ let db: IPlay[] = [];
 const initPlayers = () => {
   const dbtes = localStorage.getItem("players");
 
-  console.log("bbbbbbbbbbbbbbbb", dbtes);
   if (dbtes !== null) {
-    console.log("passei aqui");
     const localDb = JSON.parse(dbtes ? dbtes : "{}");
     db = localDb;
   }
 };
 
 let bowl: number = 1;
+const generateId = () => {
+  return Math.floor(Math.random() * 9999999) + 9999;
+};
 
 const bowlDefault: IPlay[] = [
   {
+    id: generateId(),
     name: "",
     photo:
       "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg",
@@ -29,6 +32,7 @@ const bowlDefault: IPlay[] = [
     bowl,
   },
   {
+    id: generateId(),
     name: "",
     photo:
       "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg",
@@ -36,6 +40,7 @@ const bowlDefault: IPlay[] = [
     bowl,
   },
   {
+    id: generateId(),
     name: "",
     photo:
       "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg",
@@ -43,6 +48,7 @@ const bowlDefault: IPlay[] = [
     bowl,
   },
   {
+    id: generateId(),
     name: "",
     photo:
       "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg",
@@ -50,7 +56,6 @@ const bowlDefault: IPlay[] = [
     bowl,
   },
 ];
-323;
 
 const getBowls = (index?: number): IPlay[] => {
   bowl = index ? index : bowl;
@@ -66,6 +71,7 @@ const getBowls = (index?: number): IPlay[] => {
   if (result.length < 4) {
     for (let i = 0; i < 4 - result.length; i++) {
       result.push({
+        id: generateId(),
         name: "",
         photo:
           "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg",
@@ -127,9 +133,14 @@ const getPlayerByPhoto = (photo: string): IPlay => {
   return result[0];
 };
 
-const updadePlayer = (name: string, photo: string, bowl: number) => {
+const updadePlayer = (
+  id: number,
+  name: string,
+  photo: string,
+  bowl: number
+) => {
   db.forEach((player) => {
-    const onePlayer = player.bowl === bowl && player.photo === photo;
+    const onePlayer = player.id === id;
     if (onePlayer) {
       player.name = name;
       player.photo = photo;
@@ -156,5 +167,6 @@ export {
   getPlayerByPhoto,
   updadePlayer,
   initPlayers,
+  generateId,
   resetPlayers,
 };
