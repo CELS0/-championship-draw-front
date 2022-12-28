@@ -69,7 +69,7 @@ const getBowls = (index?: number): IPlay[] => {
   });
 
   if (result.length < 4) {
-    for (let i = 0; i < 4 - result.length; i++) {
+    for (let i = 0; i <= (4 - result.length); i++) {
       result.push({
         id: generateId(),
         name: "",
