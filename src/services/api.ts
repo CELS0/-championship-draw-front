@@ -206,7 +206,7 @@ const initPlayers = () => {
       id: 9535113,
       name: "MATEUSINHO",
       photo:
-        "https://uploadnodejs.s3.amazonaws.com/WhatsApp+Image+2022-12-28+at+18.34.45.jpeg",
+        "https://uploadnodejs.s3.amazonaws.com/Captura+de+tela+de+2022-12-28+19-06-23+1.png",
       bowl: 7,
       is_active: true,
     },
@@ -214,7 +214,7 @@ const initPlayers = () => {
       id: 9394436,
       name: "ANDRÉ ",
       photo:
-        "https://uploadnodejs.s3.amazonaws.com/WhatsApp+Image+2022-12-28+at+18.33.13.jpeg",
+        "https://uploadnodejs.s3.amazonaws.com/WhatsApp+Image+2022-12-28+at+18.33+1.png",
       bowl: 7,
       is_active: true,
     },
