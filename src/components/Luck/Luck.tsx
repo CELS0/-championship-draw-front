@@ -82,7 +82,7 @@ export function Luck() {
       <img src="https://torneifranca.s3.amazonaws.com/camp.jpeg" />
       <div className="content-luck">
         <h1>SORTEIO CAMPEONATO DOS FRANÇAS</h1>
-        <h2>Jogadores do Pote</h2>
+        <h2>Jogadores do Pote: {bowl}</h2>
         <div>
           <img src={img1} onClick={() => handleUpdatePlayer(img1)} />
           <img src={img2} onClick={() => handleUpdatePlayer(img2)} />
