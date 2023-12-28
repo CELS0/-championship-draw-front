@@ -16,16 +16,16 @@ type IReponse = {
 
 export function Luck() {
   const [img1, setImg1] = useState(
-    "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg"
+    "https://torneifranca.s3.amazonaws.com/perfil.jpg"
   );
   const [img2, setImg2] = useState(
-    "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg"
+    "https://torneifranca.s3.amazonaws.com/perfil.jpg"
   );
   const [img3, setImg3] = useState(
-    "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg"
+    "https://torneifranca.s3.amazonaws.com/perfil.jpg"
   );
   const [img4, setImg4] = useState(
-    "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg"
+    "https://torneifranca.s3.amazonaws.com/perfil.jpg"
   );
   const [bowl, setBowl] = useState(1);
   const { handleIsactive, setModal, modal, getUpdadePlayer } =
@@ -69,7 +69,7 @@ export function Luck() {
       getUpdadePlayer(
         1,
         "",
-        "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg",
+        "https://torneifranca.s3.amazonaws.com/perfil.jpg",
         0
       );
     }
@@ -79,7 +79,7 @@ export function Luck() {
 
   return (
     <div className="container-luck">
-      <img src="https://uploadnodejs.s3.amazonaws.com/WhatsApp+Image+2022-12-28+at+19.27.43(1).jpeg" />
+      <img src="https://torneifranca.s3.amazonaws.com/camp.jpeg" />
       <div className="content-luck">
         <h1>SORTEIO CAMPEONATO DOS FRANÇAS</h1>
         <h2>Jogadores do Pote</h2>
@@ -98,7 +98,7 @@ export function Luck() {
           <BiSearchAlt />
         </button>
       </div>
-      <img src="https://uploadnodejs.s3.amazonaws.com/WhatsApp+Image+2022-12-28+at+19.28.15(1).jpeg" />
+      <img src="https://torneifranca.s3.amazonaws.com/ganhadores.jpeg" />
     </div>
   );
 }

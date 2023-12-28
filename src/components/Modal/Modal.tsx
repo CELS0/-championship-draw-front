@@ -22,7 +22,7 @@ export function Modal() {
 
     if (
       photoPlayer ===
-      "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg"
+      "https://torneifranca.s3.amazonaws.com/perfil.jpg"
     ) {
       createPlayers({
         id: generateId(),
@@ -46,7 +46,7 @@ export function Modal() {
     setName(namePlayer);
     setPhoto(
       photoPlayer ===
-        "https://uploadnodejs.s3.amazonaws.com/3eb6cc586108e24ce0135156d8d37258-grama.jpg"
+        "https://torneifranca.s3.amazonaws.com/perfil.jpg"
         ? ""
         : photoPlayer
     );
