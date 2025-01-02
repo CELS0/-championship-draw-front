@@ -1,5 +1,8 @@
+import { v4 as uuidv4 } from 'uuid';
+
+
 export type IPlay = {
-  id: number;
+  id: string;
   name: string;
   photo: string;
   bowl: number;
@@ -13,7 +16,7 @@ const initPlayers = () => {
         // POTE 1
 
     {
-      id: 924870,
+      id: uuidv4(),
       name: "CASSIo",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/Frame+122.png",
@@ -21,7 +24,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 4689046,
+      id: uuidv4(),
       name: "DAVI",
       photo:
         "https://torneifranca.s3.amazonaws.com/davi.jpeg",
@@ -29,7 +32,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 5107380,
+      id: uuidv4(),
       name: "FERNADINHO",
       photo:
         "https://torneifranca.s3.amazonaws.com/fernadinho.jpeg",
@@ -37,7 +40,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 5107381,
+      id: uuidv4(),
       name: "LUCAS DURAND",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/lucas.jpg",
@@ -46,7 +49,7 @@ const initPlayers = () => {
     },
     // POTE 2
     {
-      id: 1172722,
+      id: uuidv4(),
       name: "HENRIQUE",
       photo:
         "https://torneifranca.s3.amazonaws.com/herinque.jpeg",
@@ -63,7 +66,7 @@ const initPlayers = () => {
     //   is_active: true,
     // },
     {
-      id: 1574746,
+      id: uuidv4(),
       name: "JV_VAL",
       photo:
         "https://torneifranca.s3.amazonaws.com/jv_val.jpeg",
@@ -71,7 +74,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 4408284,
+      id: uuidv4(),
       name: "VINICIUS",
       photo:
         "https://torneifranca.s3.amazonaws.com/vinicius.jpeg",
@@ -79,7 +82,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 3714601,
+      id: uuidv4(),
       name: "MAICON",
       photo:
         "https://torneifranca.s3.amazonaws.com/maicon.jpeg",
@@ -88,7 +91,7 @@ const initPlayers = () => {
     },
     // POTE 3
     {
-      id: 5260060,
+      id: uuidv4(),
       name: "JV",
       photo:
         "https://torneifranca.s3.amazonaws.com/jv.jpeg",
@@ -96,7 +99,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 1038669,
+      id: uuidv4(),
       name: "MICHAEL ",
       photo:
         "https://torneifranca.s3.amazonaws.com/michael.jpeg",
@@ -112,15 +115,15 @@ const initPlayers = () => {
     //   is_active: true,
     // },
         {
-      id: 1411942,
-      name: "Paulinho",
+          id: uuidv4(),
+          name: "Paulinho",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/paulinho.png",
       bowl: 3,
       is_active: true,
     },
     {
-      id: 4972295,
+      id: uuidv4(),
       name: "DANILO",
       photo:
         "https://torneifranca.s3.amazonaws.com/danilo.jpeg",
@@ -136,7 +139,7 @@ const initPlayers = () => {
     //   is_active: true,
     // },
     {
-      id: 2384525,
+      id: uuidv4(),
       name: "ARNALDO",
       photo:
         "https://torneifranca.s3.amazonaws.com/arnaldo.jpeg",
@@ -144,7 +147,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 2384524,
+      id: uuidv4(),
       name: "ALEMAO",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/alemao.png",
@@ -152,7 +155,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 23842324,
+      id: uuidv4(),
       name: "CLAUDINEI",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/claudinei.png",
@@ -160,7 +163,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 8248850,
+      id: uuidv4(),
       name: "PERREIRA",
       photo:
         "https://torneifranca.s3.amazonaws.com/perreira.jpeg",
@@ -168,7 +171,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 22192305,
+      id: uuidv4(),
       name: "GABRIEL",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/Captura+de+tela+de+2025-01-01+22-16-03.png",
@@ -176,7 +179,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 2219605,
+      id: uuidv4(),
       name: "LUCIANO",
       photo:
         "https://torneifranca.s3.amazonaws.com/luciano.jpeg",
@@ -184,7 +187,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 2507472,
+      id: uuidv4(),
       name: "WILIAN",
       photo:
         "https://torneifranca.s3.amazonaws.com/wilian.jpeg",
@@ -192,7 +195,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 3357365,
+      id: uuidv4(),
       name: "ESTEVO",
       photo:
         "https://torneifranca.s3.amazonaws.com/estavo.png",
@@ -201,7 +204,7 @@ const initPlayers = () => {
     },
     // POTE 6
     {
-      id: 3966774,
+      id: uuidv4(),
       name: "JIU",
       photo:
         "https://torneifranca.s3.amazonaws.com/jiu.jpeg",
@@ -209,7 +212,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 9444853,
+      id: uuidv4(),
       name: "RONUBEM",
       photo:
       "https://torneifranca.s3.amazonaws.com/ronubem.jpeg",
@@ -217,7 +220,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 4773606,
+      id: uuidv4(),
       name: "HUGO",
       photo:
         "https://torneifranca.s3.amazonaws.com/hugo.jpeg",
@@ -225,7 +228,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 7435708,
+      id: uuidv4(),
       name: "BOLOSO",
       photo:
         "https://torneifranca.s3.amazonaws.com/boloso.jpeg",
@@ -241,7 +244,7 @@ const initPlayers = () => {
     //   is_active: true,
     // },
     {
-      id: 7431208,
+      id: uuidv4(),
       name: "BATE",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/bate.png",
@@ -249,7 +252,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 7434708,
+      id: uuidv4(),
       name: "LUIDE",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/luide.png",
@@ -257,7 +260,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 7685708,
+      id: uuidv4(),
       name: "PEDRO AFONSO",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/pedro-afonso.png",
@@ -265,7 +268,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 7432308,
+      id: uuidv4(),
       name: "PEDRINHO",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/pedrinho.png",
@@ -290,7 +293,7 @@ const initPlayers = () => {
     //   is_active: true,
     // },
     {
-      id: 94535113,
+      id: uuidv4(),
       name: "ITALO",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/italo.png",
@@ -298,7 +301,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 921535113,
+      id: uuidv4(),
       name: "PAULINHO NOT VEREADOR",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/paulinhocolega.png",
@@ -306,7 +309,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 9394436,
+      id: uuidv4(),
       name: "ANDRÉ ",
       photo:
         "https://torneifranca.s3.amazonaws.com/andre.jpeg",
@@ -314,7 +317,7 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 7814839,
+      id: uuidv4(),
       name: "ASSIS",
       photo:
         "https://torneifranca.s3.amazonaws.com/assis.png",
@@ -322,32 +325,32 @@ const initPlayers = () => {
       is_active: true,
     },
         {
-      id: 234123684,
-      name: "JUAREZ",
+          id: uuidv4(),
+          name: "JUAREZ",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/juarez.png",
       bowl: 9,
       is_active: true,
     },
         {
-      id: 2340621384,
-      name: "ZUZIN",
+          id: uuidv4(),
+          name: "ZUZIN",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/zuzin.png",
       bowl: 9,
       is_active: true,
     },
         {
-      id: 234012684,
-      name: "MIGUEL",
+          id: uuidv4(),
+          name: "MIGUEL",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/miguel.png",
       bowl: 9,
       is_active: true,
     },
         {
-      id: 2340632184,
-      name: "ZE",
+          id: uuidv4(),
+          name: "ZE",
       photo:
         "https://torneifranca.s3.amazonaws.com/ze.jpeg",
       bowl: 9,
@@ -365,7 +368,7 @@ const generateId = () => {
 
 const bowlDefault: IPlay[] = [
   {
-    id: generateId(),
+    id: String(generateId()),
     name: "",
     photo:
       "https://torneifranca.s3.amazonaws.com/perfil.jpg",
@@ -373,7 +376,7 @@ const bowlDefault: IPlay[] = [
     bowl,
   },
   {
-    id: generateId(),
+    id: String(generateId()),
     name: "",
     photo:
       "https://torneifranca.s3.amazonaws.com/perfil.jpg",
@@ -381,7 +384,7 @@ const bowlDefault: IPlay[] = [
     bowl,
   },
   {
-    id: generateId(),
+    id: String(generateId()),
     name: "",
     photo:
       "https://torneifranca.s3.amazonaws.com/perfil.jpg",
@@ -389,7 +392,7 @@ const bowlDefault: IPlay[] = [
     bowl,
   },
   {
-    id: generateId(),
+    id: String(generateId()),
     name: "",
     photo:
       "https://torneifranca.s3.amazonaws.com/perfil.jpg",
@@ -412,7 +415,7 @@ const getBowls = (index?: number): IPlay[] => {
   if (result.length < 4) {
     for (let i = 0; i <= 4 - result.length; i++) {
       result.push({
-        id: generateId(),
+        id: String(generateId()),
         name: "",
         photo:
           "https://torneifranca.s3.amazonaws.com/perfil.jpg",
@@ -477,7 +480,7 @@ const getPlayerByPhoto = (photo: string): IPlay => {
 };
 
 const updadePlayer = (
-  id: number,
+  id: string,
   name: string,
   photo: string,
   bowl: number
