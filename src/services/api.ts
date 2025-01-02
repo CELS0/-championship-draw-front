@@ -139,14 +139,7 @@ const initPlayers = () => {
       bowl: 3,
       is_active: true,
     },
-    // {
-    //   id: 8875839,
-    //   name: "MARCELO",
-    //   photo:
-    //     "https://torneifranca.s3.amazonaws.com/marcelo.jpeg",
-    //   bowl: 4,
-    //   is_active: true,
-    // },
+
     {
       id: uuidv4(),
       name: "ARNALDO",
@@ -181,9 +174,9 @@ const initPlayers = () => {
     },
     {
       id: uuidv4(),
-      name: "GABRIEL",
+      name: "ESTEVO",
       photo:
-        "https://torneifranca.s3.us-east-1.amazonaws.com/Captura+de+tela+de+2025-01-01+22-16-03.png",
+        "https://torneifranca.s3.amazonaws.com/estavo.png",
       bowl: 4,
       is_active: true,
     },
@@ -205,9 +198,9 @@ const initPlayers = () => {
     },
     {
       id: uuidv4(),
-      name: "ESTEVO",
+      name: "JUAREZ",
       photo:
-        "https://torneifranca.s3.amazonaws.com/estavo.png",
+        "https://torneifranca.s3.us-east-1.amazonaws.com/juarez.png",
       bowl: 5,
       is_active: true,
     },
@@ -337,9 +330,9 @@ const initPlayers = () => {
     },
     {
       id: uuidv4(),
-      name: "JUAREZ",
+      name: "MARCELO",
       photo:
-        "https://torneifranca.s3.us-east-1.amazonaws.com/juarez.png",
+        "https://torneifranca.s3.amazonaws.com/marcelo.jpeg",
       bowl: 9,
       is_active: true,
     },
