@@ -11,11 +11,12 @@ let db: IPlay[] = [];
 const initPlayers = () => {
   const dbtes = [
         // POTE 1
+
     {
-      id: 4408284,
-      name: "VINICIUS",
+      id: 924870,
+      name: "CASSIo",
       photo:
-        "https://torneifranca.s3.amazonaws.com/vinicius.jpeg",
+        "https://torneifranca.s3.us-east-1.amazonaws.com/Frame+122.png",
       bowl: 1,
       is_active: true,
     },
@@ -36,10 +37,10 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 1574746,
-      name: "JV_VAL",
+      id: 5107381,
+      name: "LUCAS DURAND",
       photo:
-        "https://torneifranca.s3.amazonaws.com/jv_val.jpeg",
+        "https://torneifranca.s3.us-east-1.amazonaws.com/lucas.jpg",
       bowl: 1,
       is_active: true,
     },
@@ -52,19 +53,28 @@ const initPlayers = () => {
       bowl: 2,
       is_active: true,
     },
+
+    // {
+    //   id: 6078678,
+    //   name: "ZE",
+    //   photo:
+    //     "https://torneifranca.s3.amazonaws.com/ze.jpeg",
+    //   bowl: 2,
+    //   is_active: true,
+    // },
     {
-      id: 924870,
-      name: "CASSIo",
+      id: 1574746,
+      name: "JV_VAL",
       photo:
-        "https://torneifranca.s3.amazonaws.com/cassio.jpeg",
+        "https://torneifranca.s3.amazonaws.com/jv_val.jpeg",
       bowl: 2,
       is_active: true,
     },
     {
-      id: 6078678,
-      name: "ZE",
+      id: 4408284,
+      name: "VINICIUS",
       photo:
-        "https://torneifranca.s3.amazonaws.com/ze.jpeg",
+        "https://torneifranca.s3.amazonaws.com/vinicius.jpeg",
       bowl: 2,
       is_active: true,
     },
@@ -93,11 +103,19 @@ const initPlayers = () => {
       bowl: 3,
       is_active: true,
     },
-    {
+    // {
+    //   id: 1411942,
+    //   name: "BORRACHA",
+    //   photo:
+    //     "https://torneifranca.s3.amazonaws.com/borracha.jpeg",
+    //   bowl: 3,
+    //   is_active: true,
+    // },
+        {
       id: 1411942,
-      name: "BORRACHA",
+      name: "Paulinho",
       photo:
-        "https://torneifranca.s3.amazonaws.com/borracha.jpeg",
+        "https://torneifranca.s3.us-east-1.amazonaws.com/paulinho.png",
       bowl: 3,
       is_active: true,
     },
@@ -109,19 +127,35 @@ const initPlayers = () => {
       bowl: 3,
       is_active: true,
     },
-    {
-      id: 8875839,
-      name: "MARCELO",
-      photo:
-        "https://torneifranca.s3.amazonaws.com/marcelo.jpeg",
-      bowl: 4,
-      is_active: true,
-    },
+    // {
+    //   id: 8875839,
+    //   name: "MARCELO",
+    //   photo:
+    //     "https://torneifranca.s3.amazonaws.com/marcelo.jpeg",
+    //   bowl: 4,
+    //   is_active: true,
+    // },
     {
       id: 2384525,
       name: "ARNALDO",
       photo:
         "https://torneifranca.s3.amazonaws.com/arnaldo.jpeg",
+      bowl: 4,
+      is_active: true,
+    },
+    {
+      id: 2384524,
+      name: "ALEMAO",
+      photo:
+        "https://torneifranca.s3.us-east-1.amazonaws.com/alemao.png",
+      bowl: 4,
+      is_active: true,
+    },
+    {
+      id: 23842324,
+      name: "CLAUDINEI",
+      photo:
+        "https://torneifranca.s3.us-east-1.amazonaws.com/claudinei.png",
       bowl: 4,
       is_active: true,
     },
@@ -134,26 +168,18 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 2219605,
-      name: "LUCIANO",
+      id: 22192305,
+      name: "GABRIEL",
       photo:
-        "https://torneifranca.s3.amazonaws.com/luciano.jpeg",
-      bowl: 4,
-      is_active: true,
-    },
-    {
-      id: 7435708,
-      name: "BOLOSO",
-      photo:
-        "https://torneifranca.s3.amazonaws.com/boloso.jpeg",
+        "https://torneifranca.s3.us-east-1.amazonaws.com/Captura+de+tela+de+2025-01-01+22-16-03.png",
       bowl: 5,
       is_active: true,
     },
     {
-      id: 4773606,
-      name: "PEDRO AFONSO",
+      id: 2219605,
+      name: "LUCIANO",
       photo:
-        "https://torneifranca.s3.amazonaws.com/hugo.jpeg",
+        "https://torneifranca.s3.amazonaws.com/luciano.jpeg",
       bowl: 5,
       is_active: true,
     },
@@ -191,21 +217,37 @@ const initPlayers = () => {
       is_active: true,
     },
     {
-      id: 4744274,
-      name: "GORDIN",
+      id: 4773606,
+      name: "PEDRO AFONSO",
       photo:
-        "https://torneifranca.s3.amazonaws.com/gordin.jpeg",
+        "https://torneifranca.s3.amazonaws.com/hugo.jpeg",
       bowl: 6,
       is_active: true,
     },
     {
-      id: 2340684,
-      name: "DANI",
+      id: 7435708,
+      name: "BOLOSO",
       photo:
-        "https://torneifranca.s3.amazonaws.com/dani.jpeg",
+        "https://torneifranca.s3.amazonaws.com/boloso.jpeg",
       bowl: 6,
       is_active: true,
     },
+    // {
+    //   id: 4744274,
+    //   name: "GORDIN",
+    //   photo:
+    //     "https://torneifranca.s3.amazonaws.com/gordin.jpeg",
+    //   bowl: 6,
+    //   is_active: true,
+    // },
+    // {
+    //   id: 2340684,
+    //   name: "DANI",
+    //   photo:
+    //     "https://torneifranca.s3.amazonaws.com/dani.jpeg",
+    //   bowl: 6,
+    //   is_active: true,
+    // },
     // POTE 7
     {
       id: 9535113,
@@ -220,14 +262,6 @@ const initPlayers = () => {
       name: "ANDRÉ ",
       photo:
         "https://torneifranca.s3.amazonaws.com/andre.jpeg",
-      bowl: 7,
-      is_active: true,
-    },
-    {
-      id: 9711288,
-      name: "PAULINHO",
-      photo:
-        "https://torneifranca.s3.amazonaws.com/paulinho.jpeg",
       bowl: 7,
       is_active: true,
     },
