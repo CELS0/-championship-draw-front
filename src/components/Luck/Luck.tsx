@@ -5,7 +5,7 @@ import { getBowls, getPlayerByPhoto } from "../../services/api";
 import { AuthContext } from "../../contexts/auth";
 
 type IReponse = {
-  id: number;
+  id: string;
   name: string;
   img: string;
   bowl: number;
@@ -67,7 +67,7 @@ export function Luck() {
       getUpdadePlayer(id, name, photo, bowl);
     } else {
       getUpdadePlayer(
-        1,
+        "1",
         "",
         "https://torneifranca.s3.amazonaws.com/perfil.jpg",
         0

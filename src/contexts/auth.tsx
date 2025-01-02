@@ -97,7 +97,7 @@ type AuthContextData = {
   indexPlayer: number;
 
   getUpdadePlayer: (
-    id: number,
+    id: string,
     name: string,
     photo: string,
     bowl: number
@@ -107,7 +107,7 @@ type AuthContextData = {
   photoPlayer: string;
   namePlayer: string;
   bowlPlayer: number;
-  idPlayer: number;
+  idPlayer: string;
 };
 
 export const AuthContext = createContext({} as AuthContextData);
@@ -279,7 +279,7 @@ export function AuthProvider(props: AuthProvider) {
   const [indexPlayer, setIndexPlayer] = useState(0);
   const [img, setImg] = useState("");
   const [photoPlayer, setPhotoPlayer] = useState("");
-  const [idPlayer, setIdPlayer] = useState(0)
+  const [idPlayer, setIdPlayer] = useState("")
   const [bowlPlayer, setbowlPlayer] = useState(0);
   const [namePlayer, setNamePlayer] = useState("");
 
@@ -293,7 +293,7 @@ export function AuthProvider(props: AuthProvider) {
     setIsActive(newIsActive);
   }
 
-  function getUpdadePlayer(id: number,name: string, photo: string, bowl: number) {
+  function getUpdadePlayer(id: string, name: string, photo: string, bowl: number) {
     setNamePlayer(name);
     setPhotoPlayer(photo);
     setbowlPlayer(bowl);
