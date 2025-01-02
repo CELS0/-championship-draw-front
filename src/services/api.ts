@@ -148,7 +148,7 @@ const initPlayers = () => {
       name: "ALEMAO",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/alemao.png",
-      bowl: 4,
+      bowl: 5,
       is_active: true,
     },
     {
@@ -172,7 +172,7 @@ const initPlayers = () => {
       name: "GABRIEL",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/Captura+de+tela+de+2025-01-01+22-16-03.png",
-      bowl: 5,
+      bowl: 4,
       is_active: true,
     },
     {
@@ -205,7 +205,7 @@ const initPlayers = () => {
       name: "JIU",
       photo:
         "https://torneifranca.s3.amazonaws.com/jiu.jpeg",
-      bowl: 6,
+      bowl: 7,
       is_active: true,
     },
     {
@@ -218,7 +218,7 @@ const initPlayers = () => {
     },
     {
       id: 4773606,
-      name: "PEDRO AFONSO",
+      name: "HUGO",
       photo:
         "https://torneifranca.s3.amazonaws.com/hugo.jpeg",
       bowl: 6,
@@ -240,6 +240,38 @@ const initPlayers = () => {
     //   bowl: 6,
     //   is_active: true,
     // },
+    {
+      id: 7431208,
+      name: "BATE",
+      photo:
+        "https://torneifranca.s3.us-east-1.amazonaws.com/bate.png",
+      bowl: 6,
+      is_active: true,
+    },
+    {
+      id: 7434708,
+      name: "LUIDE",
+      photo:
+        "https://torneifranca.s3.us-east-1.amazonaws.com/luide.png",
+      bowl: 7,
+      is_active: true,
+    },
+    {
+      id: 7685708,
+      name: "PEDRO AFONSO",
+      photo:
+        "https://torneifranca.s3.us-east-1.amazonaws.com/pedro-afonso.png",
+      bowl: 7,
+      is_active: true,
+    },
+    {
+      id: 7432308,
+      name: "PEDRINHO",
+      photo:
+        "https://torneifranca.s3.us-east-1.amazonaws.com/pedrinho.png",
+      bowl: 7,
+      is_active: true,
+    },
     // {
     //   id: 2340684,
     //   name: "DANI",
@@ -249,12 +281,28 @@ const initPlayers = () => {
     //   is_active: true,
     // },
     // POTE 7
+    // {
+    //   id: 9535113,
+    //   name: "MATEUSINHO",
+    //   photo:
+    //     "https://torneifranca.s3.amazonaws.com/mateuzinho.jpeg",
+    //   bowl: 8,
+    //   is_active: true,
+    // },
     {
-      id: 9535113,
-      name: "MATEUSINHO",
+      id: 94535113,
+      name: "ITALO",
       photo:
-        "https://torneifranca.s3.amazonaws.com/mateuzinho.jpeg",
-      bowl: 7,
+        "https://torneifranca.s3.us-east-1.amazonaws.com/italo.png",
+      bowl: 8,
+      is_active: true,
+    },
+    {
+      id: 921535113,
+      name: "PAULINHO NOT VEREADOR",
+      photo:
+        "https://torneifranca.s3.us-east-1.amazonaws.com/paulinhocolega.png",
+      bowl: 8,
       is_active: true,
     },
     {
@@ -262,7 +310,7 @@ const initPlayers = () => {
       name: "ANDRÉ ",
       photo:
         "https://torneifranca.s3.amazonaws.com/andre.jpeg",
-      bowl: 7,
+      bowl: 8,
       is_active: true,
     },
     {
@@ -270,7 +318,39 @@ const initPlayers = () => {
       name: "ASSIS",
       photo:
         "https://torneifranca.s3.amazonaws.com/assis.png",
-      bowl: 7,
+      bowl: 8,
+      is_active: true,
+    },
+        {
+      id: 234123684,
+      name: "JUAREZ",
+      photo:
+        "https://torneifranca.s3.us-east-1.amazonaws.com/juarez.png",
+      bowl: 9,
+      is_active: true,
+    },
+        {
+      id: 2340621384,
+      name: "ZUZIN",
+      photo:
+        "https://torneifranca.s3.us-east-1.amazonaws.com/zuzin.png",
+      bowl: 9,
+      is_active: true,
+    },
+        {
+      id: 234012684,
+      name: "MIGUEL",
+      photo:
+        "https://torneifranca.s3.us-east-1.amazonaws.com/miguel.png",
+      bowl: 9,
+      is_active: true,
+    },
+        {
+      id: 2340632184,
+      name: "ZE",
+      photo:
+        "https://torneifranca.s3.amazonaws.com/ze.jpeg",
+      bowl: 9,
       is_active: true,
     },
   ];
