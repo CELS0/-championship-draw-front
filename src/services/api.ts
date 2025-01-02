@@ -455,16 +455,9 @@ const luckGetPlay = (): IPlay => {
   indexPlay = Math.floor(Math.random() * playersBowl.length);
 
   db.forEach((player) => {
-    console.log("-----------------A--", player.bowl)
 
-    if (player.name === "JIU" && player.is_active === true && bowl === 6) {
-      console.log("-------------------", player)
+    if (playersBowl[indexPlay] === player) {
       player.is_active = false;
-      indexPlay = 0;
-    } else {
-      if (playersBowl[indexPlay] === player) {
-        player.is_active = false;
-      }
     }
   });
   return playersBowl[indexPlay];
