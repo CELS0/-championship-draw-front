@@ -1,4 +1,13 @@
-import { v4 as uuidv4 } from 'uuid';
+function uuidv4(tamanho: number = 20): string {
+  const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let resultado = '';
+  for (let i = 0; i < tamanho; i++) {
+    const indice = Math.floor(Math.random() * caracteres.length);
+    resultado += caracteres.charAt(indice);
+  }
+  return resultado;
+}
+
 
 
 export type IPlay = {
