@@ -22,7 +22,7 @@ let db: IPlay[] = [];
 
 const initPlayers = () => {
   const dbtes = [
-        // POTE 1
+    // POTE 1
 
     {
       id: uuidv4(),
@@ -123,9 +123,9 @@ const initPlayers = () => {
     //   bowl: 3,
     //   is_active: true,
     // },
-        {
-          id: uuidv4(),
-          name: "Paulinho",
+    {
+      id: uuidv4(),
+      name: "Paulinho",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/paulinho.png",
       bowl: 3,
@@ -212,19 +212,20 @@ const initPlayers = () => {
       is_active: true,
     },
     // POTE 6
+
     {
       id: uuidv4(),
-      name: "JIU",
+      name: "BATE",
       photo:
-        "https://torneifranca.s3.amazonaws.com/jiu.jpeg",
-      bowl: 7,
+        "https://torneifranca.s3.us-east-1.amazonaws.com/bate.png",
+      bowl: 6,
       is_active: true,
     },
     {
       id: uuidv4(),
       name: "RONUBEM",
       photo:
-      "https://torneifranca.s3.amazonaws.com/ronubem.jpeg",
+        "https://torneifranca.s3.amazonaws.com/ronubem.jpeg",
       bowl: 6,
       is_active: true,
     },
@@ -254,12 +255,13 @@ const initPlayers = () => {
     // },
     {
       id: uuidv4(),
-      name: "BATE",
+      name: "JIU",
       photo:
-        "https://torneifranca.s3.us-east-1.amazonaws.com/bate.png",
-      bowl: 6,
+        "https://torneifranca.s3.amazonaws.com/jiu.jpeg",
+      bowl: 7,
       is_active: true,
     },
+
     {
       id: uuidv4(),
       name: "LUIDE",
@@ -333,33 +335,33 @@ const initPlayers = () => {
       bowl: 8,
       is_active: true,
     },
-        {
-          id: uuidv4(),
-          name: "JUAREZ",
+    {
+      id: uuidv4(),
+      name: "JUAREZ",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/juarez.png",
       bowl: 9,
       is_active: true,
     },
-        {
-          id: uuidv4(),
-          name: "ZUZIN",
+    {
+      id: uuidv4(),
+      name: "ZUZIN",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/zuzin.png",
       bowl: 9,
       is_active: true,
     },
-        {
-          id: uuidv4(),
-          name: "MIGUEL",
+    {
+      id: uuidv4(),
+      name: "MIGUEL",
       photo:
         "https://torneifranca.s3.us-east-1.amazonaws.com/miguel.png",
       bowl: 9,
       is_active: true,
     },
-        {
-          id: uuidv4(),
-          name: "ZE",
+    {
+      id: uuidv4(),
+      name: "ZE",
       photo:
         "https://torneifranca.s3.amazonaws.com/ze.jpeg",
       bowl: 9,
@@ -455,7 +457,7 @@ const luckGetPlay = (): IPlay => {
   db.forEach((player) => {
     console.log("-----------------A--", player.bowl)
 
-    if (player.name === "JIU" && player.is_active === true && bowl===6) {
+    if (player.name === "JIU" && player.is_active === true && bowl === 6) {
       console.log("-------------------", player)
       player.is_active = false;
       indexPlay = 0;
