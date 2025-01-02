@@ -25,7 +25,7 @@ export function Modal() {
       "https://torneifranca.s3.amazonaws.com/perfil.jpg"
     ) {
       createPlayers({
-        id: generateId(),
+        id: String(generateId()),
         name: name.toUpperCase(),
         photo,
         bowl,
